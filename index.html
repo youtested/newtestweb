@@ -3,16 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NewTestWeb - Building modern, responsive websites and digital solutions. Web development, UI/UX design, e-commerce, and cloud services.">
+    <meta name="keywords" content="web development, web design, UI/UX, e-commerce, cloud solutions, modern website">
+    <meta name="author" content="NewTestWeb">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="NewTestWeb | Modern Digital Solutions">
+    <meta property="og:description" content="Building digital experiences that matter. We create stunning, functional websites.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://youtested.github.io/newtestweb/">
+    <link rel="canonical" href="https://youtested.github.io/newtestweb/">
+    
     <title>NewTestWeb | Modern Digital Solutions</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Font-display swap to prevent FOIT */
+        @font-face {
+            font-family: 'Poppins';
+            font-display: swap;
+        }
+    </style>
 </head>
 <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
             <a href="#" class="logo">
                 <i class="fas fa-globe"></i> NewTestWeb
@@ -40,6 +63,7 @@
     </div>
 
     <!-- Hero Section -->
+    <main id="main-content">
     <section id="home" class="hero">
         <div class="hero-content">
             <span class="hero-badge">Welcome to</span>
@@ -366,6 +390,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
