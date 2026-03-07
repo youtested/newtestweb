@@ -38,10 +38,10 @@
 
 /* Theme Toggle Button */
 .theme-toggle {
-    background: var(--light-secondary);
-    border: none;
-    width: 40px;
-    height: 40px;
+    background: var(--light);
+    border: 2px solid var(--light-secondary);
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -49,14 +49,24 @@
     justify-content: center;
     transition: var(--transition);
     color: var(--text-dark);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-left: 15px;
     flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .theme-toggle:hover {
     background: var(--primary);
     color: var(--white);
+    border-color: var(--primary);
+    transform: scale(1.1);
+}
+
+/* Dark mode icon styling */
+[data-theme="dark"] .theme-toggle {
+    background: var(--dark-secondary);
+    border-color: var(--dark-tertiary);
+    color: #fbbf24;
 }
 
 .theme-toggle-mobile {
