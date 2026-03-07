@@ -17,15 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function toggleTheme() {
         var currentTheme = document.documentElement.getAttribute('data-theme');
         var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        // Force remove old theme and add new one
         document.documentElement.removeAttribute('data-theme');
         document.documentElement.setAttribute('data-theme', newTheme);
-        
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(newTheme);
-        
-        // Force body background refresh
         document.body.style.backgroundColor = newTheme === 'dark' ? '#0a0a0a' : '#f8fafc';
     }
 
@@ -73,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.remove('scrolled');
         }
 
-        // Scroll top button
         var scrollTopBtn = document.getElementById('scrollTop');
         if (scrollTopBtn) {
             if (window.scrollY > 500) {
@@ -146,8 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-});
-
     // FAQ Accordion
     var faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(function(question) {
@@ -155,12 +147,10 @@ document.addEventListener('DOMContentLoaded', function() {
             var answer = this.nextElementSibling;
             var icon = this.querySelector('i');
             
-            // Toggle current
             if (answer.style.maxHeight) {
                 answer.style.maxHeight = null;
                 this.classList.remove('active');
             } else {
-                // Close others
                 document.querySelectorAll('.faq-answer').forEach(function(a) { a.style.maxHeight = null; });
                 document.querySelectorAll('.faq-question').forEach(function(q) { q.classList.remove('active'); });
                 
