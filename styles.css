@@ -22,6 +22,52 @@
     --transition: all 0.3s ease;
 }
 
+/* Dark Mode */
+[data-theme="dark"] {
+    --dark: #f8fafc;
+    --dark-secondary: #e2e8f0;
+    --dark-tertiary: #cbd5e1;
+    --light: #0f172a;
+    --light-secondary: #1e293b;
+    --text-dark: #f1f5f9;
+    --text-light: #94a3b8;
+    --white: #1e293b;
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: var(--light-secondary);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    margin-left: 15px;
+}
+
+.theme-toggle:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.theme-toggle-mobile {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    margin-left: 0;
+    margin-top: 10px;
+    gap: 10px;
+}
+
 /* Skip Link for Accessibility */
 .skip-link {
     position: absolute;

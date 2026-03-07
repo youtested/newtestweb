@@ -5,9 +5,42 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const scrollTopBtn = document.getElementById('scrollTop');
 const contactForm = document.getElementById('contactForm');
 const toast = document.getElementById('toast');
+const themeToggle = document.getElementById('themeToggle');
+const themeToggleMobile = document.getElementById('themeToggleMobile');
 
 // Use globalThis for Deno compatibility
 const global = typeof globalThis !== 'undefined' ? globalThis : window;
+
+// Dark Mode Toggle
+const savedTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+function updateThemeIcon(theme) {
+    const iconClass = theme === 'dark' ? 'fa-sun' : 'fa-moon';
+    if (themeToggle) {
+        themeToggle.innerHTML = `<i class="fas ${iconClass}"></i>`;
+    }
+    if (themeToggleMobile) {
+        themeToggleMobile.innerHTML = `<i class="fas ${iconClass}"></i> ${theme === 'dark' ? 'Light Mode' : 'Dark Mode'}`;
+    }
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+}
+
+if (themeToggleMobile) {
+    themeToggleMobile.addEventListener('click', toggleTheme);
+}
 
 // Navbar scroll effect
 global.addEventListener('scroll', () => {
