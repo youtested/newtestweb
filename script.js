@@ -42,6 +42,27 @@ if (themeToggleMobile) {
     themeToggleMobile.addEventListener('click', toggleTheme);
 }
 
+// Hamburger menu toggle
+const navLinks = document.querySelector('.nav-links');
+
+if (navToggle) {
+    navToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        navLinks.classList.toggle('active');
+        navToggle.querySelector('i').classList.toggle('fa-bars');
+        navToggle.querySelector('i').classList.toggle('fa-times');
+    });
+}
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        navToggle.querySelector('i').classList.add('fa-bars');
+        navToggle.querySelector('i').classList.remove('fa-times');
+    });
+});
+
 // Navbar scroll effect
 global.addEventListener('scroll', () => {
     if (global.scrollY > 50) {
