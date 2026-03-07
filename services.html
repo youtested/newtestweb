@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services offered by NewTestWeb - Web Development, UI/UX Design, E-Commerce, Cloud Solutions">
+    <meta name="robots" content="index, follow">
+    <title>Services | NewTestWeb</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <nav class="navbar">
+        <div class="container">
+            <a href="https://youtested.github.io/newtestweb/" class="logo">
+                <i class="fas fa-globe"></i> NewTestWeb
+            </a>
+            <div class="nav-links">
+                <a href="https://youtested.github.io/newtestweb/">Home</a>
+                <a href="https://youtested.github.io/newtestweb/about.html">About</a>
+                <a href="https://youtested.github.io/newtestweb/services.html">Services</a>
+                <a href="https://youtested.github.io/newtestweb/projects.html">Projects</a>
+                <a href="https://youtested.github.io/newtestweb/contact.html">Contact</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="https://youtested.github.io/newtestweb/">Home</a>
+        <a href="https://youtested.github.io/newtestweb/about.html">About</a>
+        <a href="https://youtested.github.io/newtestweb/services.html">Services</a>
+        <a href="https://youtested.github.io/newtestweb/projects.html">Projects</a>
+        <a href="https://youtested.github.io/newtestweb/contact.html">Contact</a>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i> Dark Mode
+        </button>
+    </div>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <span class="section-tag">Our Services</span>
+                <h1>What We Offer</h1>
+                <p>Comprehensive digital solutions tailored to your business needs.</p>
+            </div>
+        </section>
+
+        <section class="services-detail">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Custom websites built with modern frameworks and best practices. From simple landing pages to complex web applications.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> React & Vue.js Development</li>
+                            <li><i class="fas fa-check"></i> Node.js Backend</li>
+                            <li><i class="fas fa-check"></i> REST & GraphQL APIs</li>
+                            <li><i class="fas fa-check"></i> CMS Integration</li>
+                            <li><i class="fas fa-check"></i> E-commerce Solutions</li>
+                        </ul>
+                        <a href="https://youtested.github.io/newtestweb/contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>UI/UX Design</h3>
+                        <p>Beautiful, intuitive designs that engage users and drive conversions. We create experiences that users love.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> UI/UX Strategy</li>
+                            <li><i class="fas fa-check"></i> Wireframing & Prototyping</li>
+                            <li><i class="fas fa-check"></i> Visual Design</li>
+                            <li><i class="fas fa-check"></i> Design Systems</li>
+                            <li><i class="fas fa-check"></i> User Research</li>
+                        </ul>
+                        <a href="https://youtested.github.io/newtestweb/contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>E-Commerce</h3>
+                        <p>Full-featured online stores with secure payments and inventory management. Start selling online today.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Shopify Development</li>
+                            <li><i class="fas fa-check"></i> WooCommerce Solutions</li>
+                            <li><i class="fas fa-check"></i> Payment Gateway Integration</li>
+                            <li><i class="fas fa-check"></i> Inventory Management</li>
+                            <li><i class="fas fa-check"></i> Security & PCI Compliance</li>
+                        </ul>
+                        <a href="https://youtested.github.io/newtestweb/contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud Solutions</h3>
+                        <p>Scalable cloud infrastructure and deployment pipelines. Build for the future with modern DevOps.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> AWS & Azure Solutions</li>
+                            <li><i class="fas fa-check"></i> Docker & Kubernetes</li>
+                            <li><i class="fas fa-check"></i> CI/CD Pipelines</li>
+                            <li><i class="fas fa-check"></i> Serverless Architecture</li>
+                            <li><i class="fas fa-check"></i> Cloud Migration</li>
+                        </ul>
+                        <a href="https://youtested.github.io/newtestweb/contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Apps</h3>
+                        <p>Native and cross-platform mobile applications that deliver exceptional user experiences.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> React Native Development</li>
+                            <li><i class="fas fa-check"></i> Flutter Apps</li>
+                            <li><i class="fas fa-check"></i> iOS & Android</li>
+                            <li><i class="fas fa-check"></i> App Store Optimization</li>
+                            <li><i class="fas fa-check"></i> API Development</li>
+                        </ul>
+                        <a href="https://youtested.github.io/newtestweb/contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>SEO & Marketing</h3>
+                        <p>Improve your online visibility and drive organic traffic with our proven SEO strategies.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Technical SEO Audit</li>
+                            <li><i class="fas fa-check"></i> On-Page Optimization</li>
+                            <li><i class="fas fa-check"></i> Content Strategy</li>
+                            <li><i class="fas fa-check"></i> Analytics & Reporting</li>
+                            <li><i class="fas fa-check"></i> Link Building</li>
+                        </ul>
+                        <a href="https://youtested.github.io/newtestweb/contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Need Something Custom?</h2>
+                <p>Let's discuss your unique requirements and find the perfect solution.</p>
+                <a href="https://youtested.github.io/newtestweb/contact.html" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Talk to Us
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="https://youtested.github.io/newtestweb/" class="logo">
+                        <i class="fas fa-globe"></i> NewTestWeb
+                    </a>
+                    <p>Building digital experiences that matter.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="https://youtested.github.io/newtestweb/">Home</a>
+                    <a href="https://youtested.github.io/newtestweb/about.html">About</a>
+                    <a href="https://youtested.github.io/newtestweb/services.html">Services</a>
+                    <a href="https://youtested.github.io/newtestweb/projects.html">Projects</a>
+                    <a href="https://youtested.github.io/newtestweb/contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="https://youtested.github.io/newtestweb/services.html">Web Development</a>
+                    <a href="https://youtested.github.io/newtestweb/services.html">UI/UX Design</a>
+                    <a href="https://youtested.github.io/newtestweb/services.html">E-Commerce</a>
+                    <a href="https://youtested.github.io/newtestweb/services.html">Cloud Solutions</a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NewTestWeb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects portfolio - View our recent work in web development, mobile apps, and digital solutions">
+    <meta name="robots" content="index, follow">
+    <title>Projects | NewTestWeb</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <nav class="navbar">
+        <div class="container">
+            <a href="https://youtested.github.io/newtestweb/" class="logo">
+                <i class="fas fa-globe"></i> NewTestWeb
+            </a>
+            <div class="nav-links">
+                <a href="https://youtested.github.io/newtestweb/">Home</a>
+                <a href="https://youtested.github.io/newtestweb/about.html">About</a>
+                <a href="https://youtested.github.io/newtestweb/services.html">Services</a>
+                <a href="https://youtested.github.io/newtestweb/projects.html">Projects</a>
+                <a href="https://youtested.github.io/newtestweb/contact.html">Contact</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="https://youtested.github.io/newtestweb/">Home</a>
+        <a href="https://youtested.github.io/newtestweb/about.html">About</a>
+        <a href="https://youtested.github.io/newtestweb/services.html">Services</a>
+        <a href="https://youtested.github.io/newtestweb/projects.html">Projects</a>
+        <a href="https://youtested.github.io/newtestweb/contact.html">Contact</a>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i> Dark Mode
+        </button>
+    </div>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <span class="section-tag">Our Portfolio</span>
+                <h1>Our Projects</h1>
+                <p>A showcase of our recent work and achievements across various industries.</p>
+            </div>
+        </section>
+
+        <section class="projects-detail">
+            <div class="container">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>E-Commerce Platform</h3>
+                            <p>Full-featured online shopping platform with inventory management, payment processing, and admin dashboard.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>Stripe</span>
+                            </div>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>3 months</span>
+                                </div>
+                                <div class="project-stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>50K+ users</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Analytics Dashboard</h3>
+                            <p>Real-time data visualization dashboard for business intelligence with customizable widgets and reports.</p>
+                            <div class="project-tags">
+                                <span>Vue.js</span>
+                                <span>D3.js</span>
+                                <span>Firebase</span>
+                            </div>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>2 months</span>
+                                </div>
+                                <div class="project-stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>10K+ users</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Mobile Banking App</h3>
+                            <p>Secure mobile banking application with biometric authentication, transactions, and account management.</p>
+                            <div class="project-tags">
+                                <span>React Native</span>
+                                <span>TypeScript</span>
+                                <span>AWS</span>
+                            </div>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>6 months</span>
+                                </div>
+                                <div class="project-stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>100K+ users</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Social Platform</h3>
+                            <p>Community platform with real-time messaging, user profiles, content sharing, and moderation tools.</p>
+                            <div class="project-tags">
+                                <span>Next.js</span>
+                                <span>Socket.io</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>4 months</span>
+                                </div>
+                                <div class="project-stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>25K+ users</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>E-Learning Platform</h3>
+                            <p>Online learning management system with video streaming, quizzes, progress tracking, and certifications.</p>
+                            <div class="project-tags">
+                                <span>MERN Stack</span>
+                                <span>AWS S3</span>
+                                <span>Stripe</span>
+                            </div>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>5 months</span>
+                                </div>
+                                <div class="project-stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>15K+ users</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Restaurant App</h3>
+                            <p>Table reservation and ordering system for restaurants with menu management and analytics.</p>
+                            <div class="project-tags">
+                                <span>Flutter</span>
+                                <span>Firebase</span>
+                                <span>Google Maps</span>
+                            </div>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>2 months</span>
+                                </div>
+                                <div class="project-stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>5K+ users</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Have a Project in Mind?</h2>
+                <p>Let's discuss how we can bring your vision to life.</p>
+                <a href="https://youtested.github.io/newtestweb/contact.html" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Start Your Project
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="https://youtested.github.io/newtestweb/" class="logo">
+                        <i class="fas fa-globe"></i> NewTestWeb
+                    </a>
+                    <p>Building digital experiences that matter.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="https://youtested.github.io/newtestweb/">Home</a>
+                    <a href="https://youtested.github.io/newtestweb/about.html">About</a>
+                    <a href="https://youtested.github.io/newtestweb/services.html">Services</a>
+                    <a href="https://youtested.github.io/newtestweb/projects.html">Projects</a>
+                    <a href="https://youtested.github.io/newtestweb/contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="https://youtested.github.io/newtestweb/services.html">Web Development</a>
+                    <a href="https://youtested.github.io/newtestweb/services.html">UI/UX Design</a>
+                    <a href="https://youtested.github.io/newtestweb/services.html">E-Commerce</a>
+                    <a href="https://youtested.github.io/newtestweb/services.html">Cloud Solutions</a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NewTestWeb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact NewTestWeb - Get in touch for web development, design, and digital solutions">
+    <meta name="robots" content="index, follow">
+    <title>Contact Us | NewTestWeb</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <nav class="navbar">
+        <div class="container">
+            <a href="https://youtested.github.io/newtestweb/" class="logo">
+                <i class="fas fa-globe"></i> NewTestWeb
+            </a>
+            <div class="nav-links">
+                <a href="https://youtested.github.io/newtestweb/">Home</a>
+                <a href="https://youtested.github.io/newtestweb/about.html">About</a>
+                <a href="https://youtested.github.io/newtestweb/services.html">Services</a>
+                <a href="https://youtested.github.io/newtestweb/projects.html">Projects</a>
+                <a href="https://youtested.github.io/newtestweb/contact.html">Contact</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="https://youtested.github.io/newtestweb/">Home</a>
+        <a href="https://youtested.github.io/newtestweb/about.html">About</a>
+        <a href="https://youtested.github.io/newtestweb/services.html">Services</a>
+        <a href="https://youtested.github.io/newtestweb/projects.html">Projects</a>
+        <a href="https://youtested.github.io/newtestweb/contact.html">Contact</a>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i> Dark Mode
+        </button>
+    </div>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <span class="section-tag">Contact Us</span>
+                <h1>Get In Touch</h1>
+                <p>Have a project in mind? Let's discuss how we can help transform your digital presence.</p>
+            </div>
+        </section>
+
+        <section class="contact-detail">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@newtestweb.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>San Francisco, CA</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Mon - Fri: 9AM - 6PM PST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <h3>Send us a Message</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" ">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="ui-ux-design">UI/UX Design</option>
+                                <option value="ecommerce">E-Commerce</option>
+                                <option value="cloud-solutions">Cloud Solutions</option>
+                                <option value="mobile-apps">Mobile Apps</option>
+                                <option value="seo-marketing">SEO & Marketing</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="budget" name="budget">
+                                <option value="">Select Budget Range</option>
+                                <option value="under-5k">Under $5,000</option>
+                                <option value="5k-10k">$5,000 - $10,000</option>
+                                <option value="10k-25k">$10,000 - $25,000</option>
+                                <option value="25k-50k">$25,000 - $50,000</option>
+                                <option value="over-50k">Over $50,000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="6" required placeholder=" "></textarea>
+                            <label for="message">Tell us about your project</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>San Francisco, CA</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="https://youtested.github.io/newtestweb/" class="logo">
+                        <i class="fas fa-globe"></i> NewTestWeb
+                    </a>
+                    <p>Building digital experiences that matter.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="https://youtested.github.io/newtestweb/">Home</a>
+                    <a href="https://youtested.github.io/newtestweb/about.html">About</a>
+                    <a href="https://youtested.github.io/newtestweb/services.html">Services</a>
+                    <a href="https://youtested.github.io/newtestweb/projects.html">Projects</a>
+                    <a href="https://youtested.github.io/newtestweb/contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="https://youtested.github.io/newtestweb/services.html">Web Development</a>
+                    <a href="https://youtested.github.io/newtestweb/services.html">UI/UX Design</a>
+                    <a href="https://youtested.github.io/newtestweb/services.html">E-Commerce</a>
+                    <a href="https://youtested.github.io/newtestweb/services.html">Cloud Solutions</a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NewTestWeb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span>Message sent successfully!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
