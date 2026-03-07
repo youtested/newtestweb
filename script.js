@@ -6,16 +6,19 @@ const scrollTopBtn = document.getElementById('scrollTop');
 const contactForm = document.getElementById('contactForm');
 const toast = document.getElementById('toast');
 
+// Use globalThis for Deno compatibility
+const global = typeof globalThis !== 'undefined' ? globalThis : window;
+
 // Navbar scroll effect
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+global.addEventListener('scroll', () => {
+    if (global.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
 
     // Scroll top button visibility
-    if (window.scrollY > 500) {
+    if (global.scrollY > 500) {
         scrollTopBtn.classList.add('visible');
     } else {
         scrollTopBtn.classList.remove('visible');
@@ -45,7 +48,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             const offsetTop = target.offsetTop - 80;
-            window.scrollTo({
+            global.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
             });
@@ -55,7 +58,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Scroll to top button
 scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({
+    global.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
@@ -156,7 +159,7 @@ document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
 });
 
 // Lazy loading for images (if any added later)
-if ('IntersectionObserver' in window) {
+if ('IntersectionObserver' in global) {
     const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -171,11 +174,11 @@ if ('IntersectionObserver' in window) {
 }
 
 // Add parallax effect to hero section
-window.addEventListener('mousemove', (e) => {
+global.addEventListener('mousemove', (e) => {
     const heroVisual = document.querySelector('.hero-visual');
     if (heroVisual) {
-        const x = (window.innerWidth - e.pageX * 2) / 100;
-        const y = (window.innerHeight - e.pageY * 2) / 100;
+        const x = (global.innerWidth - e.pageX * 2) / 100;
+        const y = (global.innerHeight - e.pageY * 2) / 100;
         heroVisual.style.transform = `translateX(${x}px) translateY(${y}px)`;
     }
 });
@@ -213,7 +216,7 @@ document.querySelectorAll('.project-card').forEach(card => {
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-links a');
 
-window.addEventListener('scroll', () => {
+global.addEventListener('scroll', () => {
     let current = '';
     
     sections.forEach(section => {
@@ -234,7 +237,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Preloader (optional - creates a smooth loading experience)
-window.addEventListener('load', () => {
+global.addEventListener('load', () => {
     document.body.style.opacity = '1';
 });
 
