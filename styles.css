@@ -388,19 +388,32 @@ img {
     padding: 120px 0 80px;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 80%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
 }
 
 .hero .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: center;
-    text-align: center;
     position: relative;
     z-index: 1;
-    max-width: 900px !important;
+    max-width: 1200px !important;
 }
 
 .hero-content {
+    animation: fadeInUp 0.8s ease;
+}
     animation: fadeInUp 0.8s ease;
 }
 
