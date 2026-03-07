@@ -121,45 +121,54 @@
 
 /* Theme Toggle Button */
 .theme-toggle {
-    background: var(--light);
-    border: 2px solid var(--light-secondary);
+    background: var(--light) !important;
+    border: 2px solid var(--light-secondary) !important;
     width: 44px;
     height: 44px;
-    border-radius: 50%;
+    border-radius: 50% !important;
     cursor: pointer;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     transition: var(--transition);
-    color: var(--text-dark);
+    color: var(--text-dark) !important;
     font-size: 1.2rem;
     margin-left: 15px;
     flex-shrink: 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 10001 !important;
+    position: relative !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .theme-toggle:hover {
-    background: var(--primary);
-    color: var(--white);
-    border-color: var(--primary);
+    background: var(--primary) !important;
+    color: var(--white) !important;
+    border-color: var(--primary) !important;
     transform: scale(1.1);
 }
 
 /* Dark mode icon styling */
 [data-theme="dark"] .theme-toggle {
-    background: var(--dark-secondary);
-    border-color: var(--dark-tertiary);
-    color: #fbbf24;
+    background: var(--dark-secondary) !important;
+    border-color: var(--dark-tertiary) !important;
+    color: #fbbf24 !important;
 }
 
-.theme-toggle-mobile {
-    width: 100%;
-    justify-content: flex-start;
-    padding: 12px 20px;
-    border-radius: var(--radius);
-    margin-left: 0;
-    margin-top: 10px;
-    gap: 10px;
+/* Nav Toggle (Hamburger) */
+.nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px 12px;
+    background: var(--light-secondary) !important;
+    border-radius: 8px;
+    color: var(--text-dark) !important;
+    z-index: 10001 !important;
+    position: relative !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /* Skip Link for Accessibility */
