@@ -219,7 +219,7 @@ section { padding: 100px 0; }
 /* DARK MODE */
 [data-theme="dark"] { --light: #0a0a0a; --light-secondary: #1a1a1a; --text-dark: #f0f0f0; --text-light: #a0a0a0; --white: #141414; }
 [data-theme="dark"] body { background: #0a0a0a; color: #f0f0f0; }
-[data-theme="dark"] .navbar { background: #0a0a0a; border-bottom: 1px solid #222; }
+[data-theme="dark"] .navbar { background: #0a0a0a; }
 [data-theme="dark"] .nav-links { background: #0a0a0a; }
 [data-theme="dark"] .nav-links a { color: #f0f0f0; }
 [data-theme="dark"] .theme-toggle { background: #1a1a1a; color: #fbbf24; }
