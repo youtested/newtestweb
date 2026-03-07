@@ -17,10 +17,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function toggleTheme() {
         var currentTheme = document.documentElement.getAttribute('data-theme');
         var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        // Force remove old theme and add new one
+        document.documentElement.removeAttribute('data-theme');
         document.documentElement.setAttribute('data-theme', newTheme);
+        
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(newTheme);
-        console.log('Theme changed to:', newTheme);
+        
+        // Force body background refresh
+        document.body.style.backgroundColor = newTheme === 'dark' ? '#0a0a0a' : '#f8fafc';
     }
 
     if (themeToggle) {
