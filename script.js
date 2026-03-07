@@ -1,30 +1,26 @@
 // DOM Elements
 const navbar = document.querySelector('.navbar');
 const navToggle = document.querySelector('.nav-toggle');
-const mobileMenu = document.querySelector('.mobile-menu');
+const navLinks = document.querySelector('.nav-links');
 const scrollTopBtn = document.getElementById('scrollTop');
 const contactForm = document.getElementById('contactForm');
 const toast = document.getElementById('toast');
 const themeToggle = document.getElementById('themeToggle');
-const themeToggleMobile = document.getElementById('themeToggleMobile');
 
 // Use globalThis for Deno compatibility
 const global = typeof globalThis !== 'undefined' ? globalThis : window;
 
-// Dark Mode Toggle
+// Dark Mode Toggle - Works on all pages
 const savedTheme = localStorage.getItem('theme') || 'light';
 document.documentElement.setAttribute('data-theme', savedTheme);
-updateThemeIcon(savedTheme);
 
 function updateThemeIcon(theme) {
     const iconClass = theme === 'dark' ? 'fa-sun' : 'fa-moon';
     if (themeToggle) {
         themeToggle.innerHTML = `<i class="fas ${iconClass}"></i>`;
     }
-    if (themeToggleMobile) {
-        themeToggleMobile.innerHTML = `<i class="fas ${iconClass}"></i> ${theme === 'dark' ? 'Light Mode' : 'Dark Mode'}`;
-    }
 }
+updateThemeIcon(savedTheme);
 
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -32,36 +28,33 @@ function toggleTheme() {
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
+    console.log('Theme toggled to:', newTheme);
 }
 
 if (themeToggle) {
     themeToggle.addEventListener('click', toggleTheme);
+    console.log('Theme toggle button found and click handler attached');
 }
 
-if (themeToggleMobile) {
-    themeToggleMobile.addEventListener('click', toggleTheme);
-}
-
-// Hamburger menu toggle
-const navLinks = document.querySelector('.nav-links');
-
-if (navToggle) {
-    navToggle.addEventListener('click', (e) => {
-        e.preventDefault();
+// Hamburger menu toggle - Works on all screen sizes
+if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function() {
+        console.log('Hamburger clicked');
         navLinks.classList.toggle('active');
-        navToggle.querySelector('i').classList.toggle('fa-bars');
-        navToggle.querySelector('i').classList.toggle('fa-times');
+        // Toggle between bars and times icon
+        const icon = navToggle.querySelector('i');
+        if (icon.classList.contains('fa-bars')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
     });
+    console.log('Hamburger menu found and click handler attached');
+} else {
+    console.log('Error: navToggle or navLinks not found');
 }
-
-// Close menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        navToggle.querySelector('i').classList.add('fa-bars');
-        navToggle.querySelector('i').classList.remove('fa-times');
-    });
-});
 
 // Navbar scroll effect
 global.addEventListener('scroll', () => {
