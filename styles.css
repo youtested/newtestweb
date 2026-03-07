@@ -51,6 +51,7 @@
     color: var(--text-dark);
     font-size: 1.1rem;
     margin-left: 15px;
+    flex-shrink: 0;
 }
 
 .theme-toggle:hover {
@@ -1054,6 +1055,13 @@ section {
 
     .nav-toggle {
         display: block;
+    }
+
+    /* Show theme toggle on mobile - outside nav-links */
+    .theme-toggle {
+        display: flex !important;
+        margin-left: auto;
+        margin-right: 15px;
     }
 
     .hero h1 {
