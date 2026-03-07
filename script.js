@@ -147,3 +147,68 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+    // FAQ Accordion
+    var faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(function(question) {
+        question.addEventListener('click', function() {
+            var answer = this.nextElementSibling;
+            var icon = this.querySelector('i');
+            
+            // Toggle current
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+                this.classList.remove('active');
+            } else {
+                // Close others
+                document.querySelectorAll('.faq-answer').forEach(function(a) { a.style.maxHeight = null; });
+                document.querySelectorAll('.faq-question').forEach(function(q) { q.classList.remove('active'); });
+                
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                this.classList.add('active');
+            }
+        });
+    });
+
+    // Cookie Consent
+    var cookieConsent = document.querySelector('.cookie-consent');
+    var cookieAccepted = localStorage.getItem('cookieAccepted');
+    
+    if (!cookieAccepted && cookieConsent) {
+        setTimeout(function() {
+            cookieConsent.classList.add('show');
+        }, 2000);
+    }
+    
+    var cookieAcceptBtn = document.querySelector('.cookie-btn.accept');
+    var cookieDeclineBtn = document.querySelector('.cookie-btn.decline');
+    
+    if (cookieAcceptBtn) {
+        cookieAcceptBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieAccepted', 'true');
+            cookieConsent.classList.remove('show');
+        });
+    }
+    
+    if (cookieDeclineBtn) {
+        cookieDeclineBtn.addEventListener('click', function() {
+            cookieConsent.classList.remove('show');
+        });
+    }
+
+    // Scroll Animation
+    var animateElements = document.querySelectorAll('.about-card, .service-card, .project-card, .testimonial-card, .pricing-card, .faq-item');
+    
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-on-scroll');
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    animateElements.forEach(function(el) {
+        observer.observe(el);
+    });
+
+});
