@@ -52,10 +52,22 @@ document.addEventListener('DOMContentLoaded', function() {
             aboutUs: "About Us", whoWeAre: "Who We Are", aboutDesc: "We're a team of passionate developers and designers dedicated to creating exceptional digital experiences.",
             testiDesc: "Don't just take our word for it - hear from our satisfied clients.",
             project1: "E-Commerce Platform", project2: "Analytics Dashboard", project3: "Mobile Banking App", project4: "Social Platform", project5: "E-Learning Platform", project6: "Restaurant App",
+            projectDesc1: "Full-featured online shopping platform with inventory management.", projectDesc2: "Real-time data visualization dashboard for business intelligence.", projectDesc3: "Secure mobile banking application with biometric authentication.", projectDesc4: "Community platform with real-time messaging and user profiles.", projectDesc5: "Online learning management system with video streaming.", projectDesc6: "Table reservation and ordering system for restaurants.",
+            techReact: "React", techVue: "Vue.js", techNode: "Node.js", techMongo: "MongoDB", techD3: "D3.js", techFirebase: "Firebase", techReactNative: "React Native", techTypeScript: "TypeScript", techAWS: "AWS", techNext: "Next.js", techSocket: "Socket.io", techPostgres: "PostgreSQL", techMERN: "MERN Stack", techS3: "AWS S3", techStripe: "Stripe", techFlutter: "Flutter", techMaps: "Google Maps",
             reactVue: "React & Vue.js", nodeBackend: "Node.js Backend", restApi: "REST & GraphQL APIs",
             figmaXd: "Figma & Adobe XD", prototyping: "Prototyping", designSystems: "Design Systems",
             shopifyWoo: "Shopify & WooCommerce", paymentGateway: "Payment Gateway", adminDashboard: "Admin Dashboard",
-            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "CI/CD Pipelines"
+            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "CI/CD Pipelines",
+            learnMore: "Learn More", viewAll: "View All", viewProject: "View Project",
+            partner1: "CloudTech", partner2: "SpaceX", partner3: "HealthPlus", partner4: "ShopEasy", partner5: "DataViz", partner6: "EduLearn",
+            starter: "Starter", professional: "Professional", enterprise: "Enterprise", perfectSmall: "Perfect for small businesses", bestGrowing: "Best for growing businesses", largeOrg: "For large organizations",
+            fivePage: "5 Page Website", mobileResponsive: "Mobile Responsive", contactForm: "Contact Form", basicSEO: "Basic SEO", oneMonth: "1 Month Support",
+            tenPage: "10 Page Website", advancedForms: "Advanced Forms", fullSEO: "Full SEO Package", ecommerceReady: "E-commerce Ready", threeMonths: "3 Months Support",
+            unlimitedPages: "Unlimited Pages", customDev: "Custom Development", ecommerceStore: "E-commerce Store", analytics: "Advanced Analytics", apiIntegration: "API Integration", twelveMonths: "12 Months Support",
+            selectService: "Select a Service", webDevService: "Web Development", uiuxService: "UI/UX Design", cloudService: "Cloud Solutions", otherService: "Other",
+            helloEmail: "hello@newtestweb.com", phoneNum: "+1 (555) 123-4567", sfLocation: "San Francisco, CA",
+            buildDigi: "Building digital experiences that matter.",
+            copyright: "© 2026 NewTestWeb. All rights reserved."
         },
         es: {
             home: "Inicio", about: "Nosotros", services: "Servicios", projects: "Proyectos", contact: "Contacto",
@@ -102,7 +114,17 @@ document.addEventListener('DOMContentLoaded', function() {
             reactVue: "React & Vue.js", nodeBackend: "Backend Node.js", restApi: "APIs REST & GraphQL",
             figmaXd: "Figma & Adobe XD", prototyping: "Prototipado", designSystems: "Sistemas de Diseño",
             shopifyWoo: "Shopify & WooCommerce", paymentGateway: "Pasarela de Pago", adminDashboard: "Panel de Admin",
-            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "Pipelines CI/CD"
+            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "Pipelines CI/CD",
+            learnMore: "Saber Más", viewAll: "Ver Todo", viewProject: "Ver Proyecto",
+            partner1: "CloudTech", partner2: "SpaceX", partner3: "HealthPlus", partner4: "ShopEasy", partner5: "DataViz", partner6: "EduLearn",
+            starter: "Inicial", professional: "Profesional", enterprise: "Empresarial", perfectSmall: "Perfecto para pequeñas empresas", bestGrowing: "Para empresas en crecimiento", largeOrg: "Para grandes organizaciones",
+            fivePage: "Sitio de 5 páginas", mobileResponsive: "Responsivo", contactForm: "Formulario de contacto", basicSEO: "SEO básico", oneMonth: "1 mes de soporte",
+            tenPage: "Sitio de 10 páginas", advancedForms: "Formularios avanzados", fullSEO: "SEO completo", ecommerceReady: "E-commerce listo", threeMonths: "3 meses de soporte",
+            unlimitedPages: "Páginas ilimitadas", customDev: "Desarrollo personalizado", ecommerceStore: "Tienda e-commerce", analytics: "Analíticas avanzadas", apiIntegration: "Integración API", twelveMonths: "12 meses de soporte",
+            selectService: "Seleccionar servicio", webDevService: "Desarrollo Web", uiuxService: "Diseño UI/UX", cloudService: "Soluciones Cloud", otherService: "Otro",
+            helloEmail: "hola@newtestweb.com", phoneNum: "+1 (555) 123-4567", sfLocation: "San Francisco, CA",
+            buildDigi: "Creando experiencias digitales que importan.",
+            copyright: "© 2026 NewTestWeb. Todos los derechos reservados."
         },
         fr: {
             home: "Accueil", about: "À propos", services: "Services", projects: "Projets", contact: "Contact",
@@ -149,7 +171,17 @@ document.addEventListener('DOMContentLoaded', function() {
             reactVue: "React & Vue.js", nodeBackend: "Backend Node.js", restApi: "APIs REST & GraphQL",
             figmaXd: "Figma & Adobe XD", prototyping: "Prototypage", designSystems: "Systèmes de Design",
             shopifyWoo: "Shopify & WooCommerce", paymentGateway: "Passerelle de Paiement", adminDashboard: "Dashboard Admin",
-            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "Pipelines CI/CD"
+            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "Pipelines CI/CD",
+            learnMore: "En Savoir Plus", viewAll: "Voir Tout", viewProject: "Voir Projet",
+            partner1: "CloudTech", partner2: "SpaceX", partner3: "HealthPlus", partner4: "ShopEasy", partner5: "DataViz", partner6: "EduLearn",
+            starter: "Débutant", professional: "Professionnel", enterprise: "Entreprise", perfectSmall: "Parfait pour les petites entreprises", bestGrowing: "Pour les entreprises en croissance", largeOrg: "Pour les grandes organisations",
+            fivePage: "Site 5 pages", mobileResponsive: "Responsive", contactForm: "Formulaire contact", basicSEO: "SEO basique", oneMonth: "1 mois de support",
+            tenPage: "Site 10 pages", advancedForms: "Formulaires avancés", fullSEO: "SEO complet", ecommerceReady: "E-commerce prêt", threeMonths: "3 mois de support",
+            unlimitedPages: "Pages illimitées", customDev: "Développement sur mesure", ecommerceStore: "Boutique e-commerce", analytics: "Analytique avancée", apiIntegration: "Intégration API", twelveMonths: "12 mois de support",
+            selectService: "Sélectionner un service", webDevService: "Développement Web", uiuxService: "Design UI/UX", cloudService: "Solutions Cloud", otherService: "Autre",
+            helloEmail: "bonjour@newtestweb.com", phoneNum: "+1 (555) 123-4567", sfLocation: "San Francisco, CA",
+            buildDigi: "Créer des expériences numériques qui comptent.",
+            copyright: "© 2026 NewTestWeb. Tous droits réservés."
         },
         de: {
             home: "Startseite", about: "Über uns", services: "Leistungen", projects: "Projekte", contact: "Kontakt",
@@ -196,7 +228,17 @@ document.addEventListener('DOMContentLoaded', function() {
             reactVue: "React & Vue.js", nodeBackend: "Node.js Backend", restApi: "REST & GraphQL APIs",
             figmaXd: "Figma & Adobe XD", prototyping: "Prototyping", designSystems: "Design Systems",
             shopifyWoo: "Shopify & WooCommerce", paymentGateway: "Zahlungs-Gateway", adminDashboard: "Admin Dashboard",
-            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "CI/CD Pipelines"
+            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "CI/CD Pipelines",
+            learnMore: "Mehr Erfahren", viewAll: "Alle Ansehen", viewProject: "Projekt Ansehen",
+            partner1: "CloudTech", partner2: "SpaceX", partner3: "HealthPlus", partner4: "ShopEasy", partner5: "DataViz", partner6: "EduLearn",
+            starter: "Starter", professional: "Professional", enterprise: "Enterprise", perfectSmall: "Perfekt für kleine Unternehmen", bestGrowing: "Am besten für wachsende Unternehmen", largeOrg: "Für große Organisationen",
+            fivePage: "5 Seiten Website", mobileResponsive: "Responsiv", contactForm: "Kontaktformular", basicSEO: "Basis SEO", oneMonth: "1 Monat Support",
+            tenPage: "10 Seiten Website", advancedForms: "Erweiterte Formulare", fullSEO: "Vollständiges SEO", ecommerceReady: "E-commerce Ready", threeMonths: "3 Monate Support",
+            unlimitedPages: "Unbegrenzte Seiten", customDev: "Benutzerdefinierte Entwicklung", ecommerceStore: "E-commerce Store", analytics: "Erweiterte Analytik", apiIntegration: "API Integration", twelveMonths: "12 Monate Support",
+            selectService: "Service auswählen", webDevService: "Webentwicklung", uiuxService: "UI/UX Design", cloudService: "Cloud Lösungen", otherService: "Andere",
+            helloEmail: "hallo@newtestweb.com", phoneNum: "+1 (555) 123-4567", sfLocation: "San Francisco, CA",
+            buildDigi: "Digitale Erlebnisse schaffen, die wichtig sind.",
+            copyright: "© 2026 NewTestWeb. Alle Rechte vorbehalten."
         },
         zh: {
             home: "首页", about: "关于", services: "服务", projects: "项目", contact: "联系",
@@ -243,7 +285,17 @@ document.addEventListener('DOMContentLoaded', function() {
             reactVue: "React和Vue.js", nodeBackend: "Node.js后端", restApi: "REST和GraphQL API",
             figmaXd: "Figma和Adobe XD", prototyping: "原型设计", designSystems: "设计系统",
             shopifyWoo: "Shopify和WooCommerce", paymentGateway: "支付网关", adminDashboard: "管理后台",
-            awsAzure: "AWS和Azure", dockerKube: "Docker和Kubernetes", cicdPipelines: "持续集成/持续部署"
+            awsAzure: "AWS和Azure", dockerKube: "Docker和Kubernetes", cicdPipelines: "持续集成/持续部署",
+            learnMore: "了解更多", viewAll: "查看全部", viewProject: "查看项目",
+            partner1: "云科技", partner2: "太空科技", partner3: "健康Plus", partner4: "轻松购", partner5: "数据视", partner6: "教育学习",
+            starter: "入门版", professional: "专业版", enterprise: "企业版", perfectSmall: "适合小型企业", bestGrowing: "适合成长型企业", largeOrg: "适合大型组织",
+            fivePage: "5页网站", mobileResponsive: "响应式", contactForm: "联系表单", basicSEO: "基础SEO", oneMonth: "1个月支持",
+            tenPage: "10页网站", advancedForms: "高级表单", fullSEO: "完整SEO", ecommerceReady: "电商就绪", threeMonths: "3个月支持",
+            unlimitedPages: "无限页面", customDev: "定制开发", ecommerceStore: "电商商城", analytics: "高级分析", apiIntegration: "API集成", twelveMonths: "12个月支持",
+            selectService: "选择服务", webDevService: "网页开发", uiuxService: "UI/UX设计", cloudService: "云解决方案", otherService: "其他",
+            helloEmail: "hello@newtestweb.com", phoneNum: "+1 (555) 123-4567", sfLocation: "加州旧金山",
+            buildDigi: "打造重要的数字体验。",
+            copyright: "© 2026 NewTestWeb. 版权所有。"
         },
         ja: {
             home: "ホーム", about: "概要", services: "サービス", projects: "プロジェクト", contact: "お問い合わせ",
@@ -290,7 +342,17 @@ document.addEventListener('DOMContentLoaded', function() {
             reactVue: "React & Vue.js", nodeBackend: "Node.js バックエンド", restApi: "REST & GraphQL API",
             figmaXd: "Figma & Adobe XD", prototyping: "プロトタイピング", designSystems: "デザインシステム",
             shopifyWoo: "Shopify & WooCommerce", paymentGateway: "決済ゲートウェイ", adminDashboard: "管理画面",
-            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "CI/CD パイプライン"
+            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "CI/CD パイプライン",
+            learnMore: "詳細", viewAll: "すべて表示", viewProject: "プロジェクトを見る",
+            partner1: "クラウドテック", partner2: "スペースX", partner3: "ヘルスプラス", partner4: "ショップイージ", partner5: "データビズ", partner6: "エデュアルーン",
+            starter: "スターター", professional: "プロフェッショナル", enterprise: "エンタープライズ", perfectSmall: "中小企业に最適", bestGrowing: "成長企業に最適", largeOrg: "大企業向け",
+            fivePage: "5ページサイト", mobileResponsive: "レスポンシブ", contactForm: "お問い合わせフォーム", basicSEO: "基本SEO", oneMonth: "1ヶ月サポート",
+            tenPage: "10ページサイト", advancedForms: "高度フォーム", fullSEO: "完全SEO", ecommerceReady: "Eコマース対応", threeMonths: "3ヶ月サポート",
+            unlimitedPages: "無制限ページ", customDev: "カスタム開発", ecommerceStore: "Eコマースストア", analytics: "高度分析", apiIntegration: "API統合", twelveMonths: "12ヶ月サポート",
+            selectService: "サービスを選択", webDevService: "Web開発", uiuxService: "UI/UXデザイン", cloudService: "クラウドソリューション", otherService: "その他",
+            helloEmail: "hello@newtestweb.com", phoneNum: "+1 (555) 123-4567", sfLocation: "サンフランシスコ",
+            buildDigi: "重要なデジタル体験を創造します。",
+            copyright: "© 2026 NewTestWeb. 全著作権所有。"
         }
     };
 
