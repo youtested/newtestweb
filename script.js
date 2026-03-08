@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
             testiDesc: "Verlassen Sie sich nicht nur auf unser Wort - hören Sie von unseren zufriedenen Kunden.",
             project1: "E-Commerce Plattform", project2: "Analyse-Dashboard", project3: "Mobile Banking App", project4: "Soziale Plattform", project5: "E-Learning Plattform", project6: "Restaurant App",
             reactVue: "React & Vue.js", nodeBackend: "Node.js Backend", restApi: "REST & GraphQL APIs",
-: "Figma            figmaXd & Adobe XD", prototyping: "Prototyping", designSystems: "Design Systeme",
+            figmaXd: "Figma & Adobe XD", prototyping: "Prototyping", designSystems: "Design Systems",
             shopifyWoo: "Shopify & WooCommerce", paymentGateway: "Zahlungs-Gateway", adminDashboard: "Admin Dashboard",
             awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "CI/CD Pipelines"
         },
