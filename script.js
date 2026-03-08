@@ -7,6 +7,163 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('page-loaded');
 
     // ============================================
+    // MULTI-LANGUAGE SUPPORT
+    // ============================================
+    var translations = {
+        en: {
+            home: "Home", about: "About", services: "Services", projects: "Projects", contact: "Contact",
+            welcome: "Welcome to", subtitle: "Building Digital Experiences That Matter",
+            description: "We create stunning, functional websites that help businesses grow.",
+            getStarted: "Get Started", learnMore: "Learn More",
+            innovative: "Innovative", innovativeDesc: "We stay ahead of the curve, using the latest technologies and design trends.",
+            clientFocused: "Client-Focused", clientFocusedDesc: "Your goals become our mission. We listen, adapt, and deliver excellence.",
+            reliable: "Reliable", reliableDesc: "Count on us for robust solutions and dedicated ongoing support.",
+            ourServices: "Our Services", whatWeOffer: "What We Offer", comprehensive: "Comprehensive digital solutions tailored to your business needs.",
+            getQuote: "Get Quote", viewAll: "View All",
+            pricing: "Pricing", choosePlan: "Choose Your Plan", popular: "Most Popular",
+            faq: "FAQ", faqTitle: "Frequently Asked Questions", faqDesc: "Got questions? We've got answers!",
+            contactUs: "Contact Us", sendMessage: "Send Message", subscribe: "Subscribe",
+            readyToStart: "Ready to Start Your Project?", letsCreate: "Let's create something amazing together."
+        },
+        es: {
+            home: "Inicio", about: "Nosotros", services: "Servicios", projects: "Proyectos", contact: "Contacto",
+            welcome: "Bienvenido a", subtitle: "Creando Experiencias Digitales Que Importan",
+            description: "Creamos sitios web stunningly funcionales que ayudan a las empresas a crecer.",
+            getStarted: "Comenzar", learnMore: "Saber Más",
+            innovative: "Innovador", innovativeDesc: "Nos mantenemos por delante, usando las últimas tecnologías.",
+            clientFocused: "Enfocado al Cliente", clientFocusedDesc: "Tus objetivos se convierten en nuestra misión.",
+            reliable: "Confiable", reliableDesc: "Cuenta con nosotros para soluciones sólidas.",
+            ourServices: "Nuestros Servicios", whatWeOffer: "Lo Que Ofrecemos", comprehensive: "Soluciones digitales completas adaptadas a tus necesidades.",
+            getQuote: "Obtener Cotización", viewAll: "Ver Todo",
+            pricing: "Precios", choosePlan: "Elige Tu Plan", popular: "Más Popular",
+            faq: "Preguntas", faqTitle: "Preguntas Frecuentes", faqDesc: "¿Tienes preguntas? ¡Tenemos respuestas!",
+            contactUs: "Contáctanos", sendMessage: "Enviar Mensaje", subscribe: "Suscribirse",
+            readyToStart: "¿Listo para comenzar tu proyecto?", letsCreate: "Creemos algo increíble juntos."
+        },
+        fr: {
+            home: "Accueil", about: "À propos", services: "Services", projects: "Projets", contact: "Contact",
+            welcome: "Bienvenue chez", subtitle: "Créer des Expériences Digitales qui Comptent",
+            description: "Nous créons des sites web stunningly fonctionnels qui aident les entreprises à se développer.",
+            getStarted: "Commencer", learnMore: "En Savoir Plus",
+            innovative: "Innovant", innovativeDesc: "Nous restons en avance, en utilisant les dernières technologies.",
+            clientFocused: "Client-Focused", clientFocusedDesc: "Vos objectifs deviennent notre mission.",
+            reliable: "Fiable", reliableDesc: "Comptez sur nous pour des solutions robustes.",
+            ourServices: "Nos Services", whatWeOffer: "Ce Que Nous Offrons", comprehensive: "Solutions numériques complètes adaptées à vos besoins.",
+            getQuote: "Devis", viewAll: "Voir Tout",
+            pricing: "Tarifs", choosePlan: "Choisissez Votre Plan", popular: "Plus Populaire",
+            faq: "FAQ", faqTitle: "Questions Fréquentes", faqDesc: "Des questions? Nous avons des réponses!",
+            contactUs: "Contactez-nous", sendMessage: "Envoyer", subscribe: "S'abonner",
+            readyToStart: "Prêt à démarrer votre projet?", letsCreate: "Créons quelque chose d'incroyable ensemble."
+        },
+        de: {
+            home: "Startseite", about: "Über uns", services: "Leistungen", projects: "Projekte", contact: "Kontakt",
+            welcome: "Willkommen bei", subtitle: "Digitale Erlebnisse Schaffen, Die Wichtig Sind",
+            description: "Wir erstellen stunningly funktionale Websites, die Unternehmen zum Wachsen verhelfen.",
+            getStarted: "Loslegen", learnMore: "Mehr Erfahren",
+            innovative: "Innovativ", innovativeDesc: "Wir bleiben vorne, mit den neuesten Technologien.",
+            clientFocused: "Kundenorientiert", clientFocusedDesc: "Ihre Ziele werden unsere Mission.",
+            reliable: "Zuverlässig", reliableDesc: "Verlassen Sie sich auf uns für robuste Lösungen.",
+            ourServices: "Unsere Leistungen", whatWeOffer: "Was Wir Anbieten", comprehensive: "Umfassende digitale Lösungen für Ihre Bedürfnisse.",
+            getQuote: "Angebot", viewAll: "Alle Ansehen",
+            pricing: "Preise", choosePlan: "Wählen Sie Ihren Plan", popular: "Beliebteste",
+            faq: "FAQ", faqTitle: "Häufig Gestellte Fragen", faqDesc: "Fragen? Wir haben Antworten!",
+            contactUs: "Kontaktieren Sie Uns", sendMessage: "Senden", subscribe: "Abonnieren",
+            readyToStart: "Bereit, Ihr Projekt zu starten?", letsCreate: "Lassen Sie uns etwas Erstaunliches schaffen."
+        },
+        zh: {
+            home: "首页", about: "关于", services: "服务", projects: "项目", contact: "联系",
+            welcome: "欢迎来到", subtitle: "打造重要的数字体验",
+            description: "我们创建功能强大的精美网站，帮助企业发展。",
+            getStarted: "开始", learnMore: "了解更多",
+            innovative: "创新", innovativeDesc: "我们走在前沿，使用最新技术。",
+            clientFocused: "以客户为中心", clientFocusedDesc: "您的目标成为我们的使命。",
+            reliable: "可靠", reliableDesc: "依靠我们提供强大的解决方案。",
+            ourServices: "我们的服务", whatWeOffer: "我们提供", comprehensive: "针对您业务需求的综合数字解决方案。",
+            getQuote: "获取报价", viewAll: "查看全部",
+            pricing: "价格", choosePlan: "选择您的计划", popular: "最受欢迎",
+            faq: "常见问题", faqTitle: "常见问题", faqDesc: "有问题？我们有答案！",
+            contactUs: "联系我们", sendMessage: "发送消息", subscribe: "订阅",
+            readyToStart: "准备好开始您的项目了吗？", letsCreate: "让我们一起创造一些了不起的东西。"
+        },
+        ja: {
+            home: "ホーム", about: "概要", services: "サービス", projects: "プロジェクト", contact: "お問い合わせ",
+            welcome: "ようこそ", subtitle: "重要なデジタル体験を創造",
+            description: "私たちはBusinessesが成長するのに役立つ効果的なWebsitesを作成します。",
+            getStarted: "始める", learnMore: "詳細",
+            innovative: "革新的", innovativeDesc: "最新技術を使用して、先を行きます。",
+            clientFocused: "クライアント重視", clientFocusedDesc: "あなたの目標は私たちの使命になります。",
+            reliable: "信頼性", reliableDesc: "堅牢なソリューション为您提供。",
+            ourServices: "サービス", whatWeOffer: "提供服务", comprehensive: "ビジネスニーズに合わせた包括的なデジタルソリューション。",
+            getQuote: "見積もりを取得", viewAll: "すべて表示",
+            pricing: "料金", choosePlan: "計画を選択", popular: "最も人気がある",
+            faq: "よくある質問", faqTitle: "よくある質問", faqDesc: "質問がありますか？答えがあります！",
+            contactUs: "お問い合わせ", sendMessage: "メッセージを送信", subscribe: "購読",
+            readyToStart: "プロジェクトの開始の準備はできましたか？", letsCreate: "一緒に素晴らしい何かを作成しましょう。"
+        }
+    };
+
+    // Language Selector
+    var langBtn = document.getElementById('langBtn');
+    var langDropdown = document.getElementById('langDropdown');
+    var savedLang = localStorage.getItem('language') || 'en';
+
+    function updateLanguage(lang) {
+        var t = translations[lang] || translations.en;
+        
+        // Update nav links (this is simplified - real implementation would need unique IDs)
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+            var key = el.getAttribute('data-i18n');
+            if (t[key]) el.textContent = t[key];
+        });
+        
+        // Update language button text
+        if (langBtn) {
+            var span = langBtn.querySelector('span');
+            if (span) span.textContent = lang.toUpperCase();
+        }
+        
+        // Update active state in dropdown
+        if (langDropdown) {
+            langDropdown.querySelectorAll('a').forEach(function(link) {
+                link.classList.remove('active');
+                if (link.getAttribute('data-lang') === lang) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        localStorage.setItem('language', lang);
+    }
+
+    // Initialize language
+    updateLanguage(savedLang);
+
+    // Language button click
+    if (langBtn) {
+        langBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (langDropdown) langDropdown.classList.toggle('show');
+        });
+    }
+
+    // Language selection
+    if (langDropdown) {
+        langDropdown.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var lang = this.getAttribute('data-lang');
+                updateLanguage(lang);
+                langDropdown.classList.remove('show');
+            });
+        });
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function() {
+        if (langDropdown) langDropdown.classList.remove('show');
+    });
+
+    // ============================================
     // THEME TOGGLE
     // ============================================
     var themeToggle = document.getElementById('themeToggle');

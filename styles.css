@@ -521,3 +521,130 @@ img.loaded { opacity: 1; }
     .stats-grid { flex-direction: column; gap: 30px; }
     .cta-section h2 { font-size: 2rem; }
 }
+
+/* ============================================
+   LANGUAGE SELECTOR
+   ============================================ */
+.language-selector {
+    position: relative;
+    margin-left: 15px;
+}
+.lang-btn {
+    background: var(--light-secondary);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+}
+.lang-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    min-width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+    z-index: 1001;
+}
+.lang-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.lang-dropdown a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--text-dark);
+    transition: var(--transition);
+    border-bottom: 1px solid var(--light-secondary);
+}
+.lang-dropdown a:last-child {
+    border-bottom: none;
+}
+.lang-dropdown a:hover {
+    background: var(--light);
+    color: var(--primary);
+}
+.lang-dropdown a.active {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Dark mode for language selector */
+[data-theme="dark"] .lang-btn {
+    background: var(--dark-secondary);
+    color: #e5e5e5;
+}
+[data-theme="dark"] .lang-dropdown {
+    background: var(--dark-secondary);
+}
+[data-theme="dark"] .lang-dropdown a {
+    color: #e5e5e5;
+    border-color: var(--dark-tertiary);
+}
+[data-theme="dark"] .lang-dropdown a:hover {
+    background: var(--dark-tertiary);
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATION
+   ============================================ */
+/* Preload critical resources */
+.preload {
+    display: none;
+}
+
+/* Optimize rendering */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Content visibility for long pages */
+.services-grid, .projects-grid, .team-grid, .blog-grid {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 500px;
+}
+
+/* GPU acceleration for animations */
+.btn, .service-card, .project-card, .team-card, .blog-card {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Optimize images */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Critical CSS inline (reduce render blocking) */
+.hero, .navbar, .page-header {
+    will-change: transform;
+}
