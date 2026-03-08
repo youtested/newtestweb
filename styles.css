@@ -25,7 +25,7 @@
 /* Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--text-dark); background: var(--light); }
+body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--text-dark); background: #ffffff; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { max-width: 100%; height: auto; }
@@ -102,6 +102,28 @@ img { max-width: 100%; height: auto; }
 
 /* Section Styles */
 section { padding: 100px 0; }
+
+/* Page Header (for services, projects, etc.) */
+.page-header {
+    background: #ffffff !important;
+    padding: 120px 0 40px !important;
+    margin-top: 60px;
+}
+.page-header .section-tag {
+    background: #ffffff !important;
+}
+.page-header h1 {
+    color: #000000 !important;
+}
+.page-header p {
+    color: #333333 !important;
+}
+
+/* Services Detail */
+.services-detail {
+    background: #ffffff !important;
+    padding: 40px 0 !important;
+}
 .section-header { text-align: center; max-width: 600px; margin: 0 auto 60px; }
 .section-tag { display: inline-block; padding: 8px 16px; background: rgba(99, 102, 241, 0.1); color: var(--primary); border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 15px; }
 .section-header h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; color: var(--dark); }
@@ -118,7 +140,7 @@ section { padding: 100px 0; }
 .about-card p { color: var(--text-light); }
 
 /* Services */
-.services { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
+.services { background: #ffffff !important; }
 .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
 .service-card { background: var(--white); padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow); transition: var(--transition); }
 .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
@@ -146,7 +168,7 @@ section { padding: 100px 0; }
 .project-link:hover { gap: 12px; }
 
 /* Contact */
-.contact { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
+.contact { background: #ffffff !important; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: start; }
 .contact-info { display: flex; flex-direction: column; gap: 30px; }
 .contact-item { display: flex; align-items: flex-start; gap: 20px; }
