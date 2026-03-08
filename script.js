@@ -281,6 +281,9 @@ document.addEventListener('DOMContentLoaded', function() {
             email: "邮箱", phone: "电话", location: "地址",
             aboutUs: "关于我们", whoWeAre: "我们是谁", aboutDesc: "我们是一个充满热情的开发者和平面设计师团队，致力于打造卓越的数字体验。",
             testiDesc: "不要只听我们说 - 听听我们满意的客户怎么说。",
+            author1: "张伟", company1: "科技公司首席执行官",
+            author2: "李娜", company2: "电商平台创始人",
+            author3: "王强", company3: "初创公司总监",
             project1: "电商平台", project2: "分析仪表板", project3: "移动银行应用", project4: "社交平台", project5: "在线学习平台", project6: "餐厅应用",
             reactVue: "React和Vue.js", nodeBackend: "Node.js后端", restApi: "REST和GraphQL API",
             figmaXd: "Figma和Adobe XD", prototyping: "原型设计", designSystems: "设计系统",
@@ -410,6 +413,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (aboutDescs[1]) aboutDescs[1].textContent = t.clientFocusedDesc;
         if (aboutDescs[2]) aboutDescs[2].textContent = t.reliableDesc;
         
+        // About section tag and header - MORE COMPLETE
+        var aboutTag = document.querySelector('#about .section-tag, .about .section-tag');
+        if (aboutTag) aboutTag.textContent = t.aboutUs || t.about;
+        
+        var aboutTitle = document.querySelector('#about .section-header h2, .about h2');
+        if (aboutTitle) aboutTitle.textContent = t.whoWeAre;
+        
+        var aboutDesc = document.querySelector('#about .section-header p, .about p');
+        if (aboutDesc) aboutDesc.textContent = t.aboutDesc;
+        
         // ===== SERVICES SECTION =====
         var servicesTag = document.querySelector('.services .section-tag');
         if (servicesTag) servicesTag.textContent = t.ourServices;
@@ -440,11 +453,32 @@ document.addEventListener('DOMContentLoaded', function() {
         if (pricingCards[2]) pricingCards[2].textContent = t.enterprisePlan;
         
         // ===== TESTIMONIALS =====
-        var testiTag = document.querySelector('.testimonials .section-tag');
+        var testiTag = document.querySelector('.testimonials .section-tag, #testimonials .section-tag');
         if (testiTag) testiTag.textContent = t.testimonials;
         
-        var testiTitle = document.querySelector('.testimonials .section-header h2');
+        var testiTitle = document.querySelector('.testimonials .section-header h2, #testimonials h2');
         if (testiTitle) testiTitle.textContent = t.whatTheySay;
+        
+        var testiDesc = document.querySelector('.testimonials .section-header p, #testimonials p');
+        if (testiDesc) testiDesc.textContent = t.testiDesc;
+        
+        // Testimonial quotes
+        var testiQuotes = document.querySelectorAll('.testimonial-content > p');
+        if (testiQuotes[0] && t.testimonial1) testiQuotes[0].textContent = '"' + t.testimonial1 + '"';
+        if (testiQuotes[1] && t.testimonial2) testiQuotes[1].textContent = '"' + t.testimonial2 + '"';
+        if (testiQuotes[2] && t.testimonial3) testiQuotes[2].textContent = '"' + t.testimonial3 + '"';
+        
+        // Testimonial authors
+        var testiAuthors = document.querySelectorAll('.testimonial-author h4');
+        if (testiAuthors[0] && t.author1) testiAuthors[0].textContent = t.author1;
+        if (testiAuthors[1] && t.author2) testiAuthors[1].textContent = t.author2;
+        if (testiAuthors[2] && t.author3) testiAuthors[2].textContent = t.author3;
+        
+        // Testimonial companies
+        var testiCompanies = document.querySelectorAll('.testimonial-author p');
+        if (testiCompanies[0] && t.company1) testiCompanies[0].textContent = t.company1;
+        if (testiCompanies[1] && t.company2) testiCompanies[1].textContent = t.company2;
+        if (testiCompanies[2] && t.company3) testiCompanies[2].textContent = t.company3;
         
         // ===== FAQ SECTION =====
         var faqTag = document.querySelector('.faq-section .section-tag');
