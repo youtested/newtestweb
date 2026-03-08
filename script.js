@@ -746,17 +746,8 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('language', lang);
     }
 
-    // Initialize language on page load - run immediately
-    (function() {
-        updateLanguage(savedLang);
-        // Run again after a short delay to catch any late-loading content
-        setTimeout(function() {
-            updateLanguage(savedLang);
-        }, 500);
-        setTimeout(function() {
-            updateLanguage(savedLang);
-        }, 1000);
-    })();
+    // DO NOT auto-translate on page load - only translate when user clicks language button
+    // This keeps the default English page in English
 
     // Language button click
     if (langBtn) {
