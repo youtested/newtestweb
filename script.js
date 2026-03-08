@@ -44,7 +44,18 @@ document.addEventListener('DOMContentLoaded', function() {
             quickLinks: "Quick Links", newsletter: "Newsletter", newsletterDesc: "Subscribe for updates and insights.",
             yourEmail: "Your email", allRights: "All rights reserved.",
             teamSection: "Our Team", meetExperts: "Meet the Experts", teamDesc: "Talented people who make it all happen.",
-            ceo: "CEO & Founder", leadDesigner: "Lead Designer", leadDeveloper: "Lead Developer", marketingDir: "Marketing Director"
+            ceo: "CEO & Founder", leadDesigner: "Lead Designer", leadDeveloper: "Lead Developer", marketingDir: "Marketing Director",
+            portfolio: "Portfolio", ourProjects: "Our Projects", projectsShowcase: "A showcase of our recent work and achievements.",
+            ourPartnersClients: "Our Partners & Clients", partnersDesc: "We've worked with amazing companies around the world.",
+            getInTouch: "Get In Touch", haveProject: "Have a project in mind? Let's discuss how we can help.",
+            email: "Email", phone: "Phone", location: "Location",
+            aboutUs: "About Us", whoWeAre: "Who We Are", aboutDesc: "We're a team of passionate developers and designers dedicated to creating exceptional digital experiences.",
+            testiDesc: "Don't just take our word for it - hear from our satisfied clients.",
+            project1: "E-Commerce Platform", project2: "Analytics Dashboard", project3: "Mobile Banking App", project4: "Social Platform", project5: "E-Learning Platform", project6: "Restaurant App",
+            reactVue: "React & Vue.js", nodeBackend: "Node.js Backend", restApi: "REST & GraphQL APIs",
+            figmaXd: "Figma & Adobe XD", prototyping: "Prototyping", designSystems: "Design Systems",
+            shopifyWoo: "Shopify & WooCommerce", paymentGateway: "Payment Gateway", adminDashboard: "Admin Dashboard",
+            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "CI/CD Pipelines"
         },
         es: {
             home: "Inicio", about: "Nosotros", services: "Servicios", projects: "Proyectos", contact: "Contacto",
@@ -80,7 +91,18 @@ document.addEventListener('DOMContentLoaded', function() {
             quickLinks: "Enlaces Rápidos", newsletter: "Boletín", newsletterDesc: "Suscríbete para actualizaciones.",
             yourEmail: "Tu email", allRights: "Todos los derechos reservados.",
             teamSection: "Nuestro Equipo", meetExperts: "Conoce a los Expertos", teamDesc: "Personas talentosas que lo hacen posible.",
-            ceo: "CEO y Fundador", leadDesigner: "Diseñador Principal", leadDeveloper: "Desarrollador Principal", marketingDir: "Director de Marketing"
+            ceo: "CEO y Fundador", leadDesigner: "Diseñador Principal", leadDeveloper: "Desarrollador Principal", marketingDir: "Director de Marketing",
+            portfolio: "Portafolio", ourProjects: "Nuestros Proyectos", projectsShowcase: "Una muestra de nuestro trabajo reciente y logros.",
+            ourPartnersClients: "Nuestros Socios y Clientes", partnersDesc: "Hemos trabajado con empresas increíbles alrededor del mundo.",
+            getInTouch: "Contáctanos", haveProject: "¿Tienes un proyecto en mente? Hablemos de cómo podemos ayudar.",
+            email: "Correo", phone: "Teléfono", location: "Ubicación",
+            aboutUs: "Sobre Nosotros", whoWeAre: "Quiénes Somos", aboutDesc: "Somos un equipo de desarrolladores y diseñadores apasionados dedicados a crear experiencias digitales excepcionales.",
+            testiDesc: "No solo tomes nuestra palabra - escucha a nuestros clientes satisfechos.",
+            project1: "Plataforma de E-Commerce", project2: "Panel de Análisis", project3: "App Banca Móvil", project4: "Plataforma Social", project5: "Plataforma E-Learning", project6: "App Restaurante",
+            reactVue: "React & Vue.js", nodeBackend: "Backend Node.js", restApi: "APIs REST & GraphQL",
+            figmaXd: "Figma & Adobe XD", prototyping: "Prototipado", designSystems: "Sistemas de Diseño",
+            shopifyWoo: "Shopify & WooCommerce", paymentGateway: "Pasarela de Pago", adminDashboard: "Panel de Admin",
+            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "Pipelines CI/CD"
         },
         fr: {
             home: "Accueil", about: "À propos", services: "Services", projects: "Projets", contact: "Contact",
@@ -116,7 +138,18 @@ document.addEventListener('DOMContentLoaded', function() {
             quickLinks: "Liens Rapides", newsletter: "Newsletter", newsletterDesc: "Abonnez-vous pour les mises à jour.",
             yourEmail: "Votre email", allRights: "Tous droits réservés.",
             teamSection: "Notre Équipe", meetExperts: "Rencontrez les Experts", teamDesc: "Des personnes talentueuses qui font tout happen.",
-            ceo: "PDG et Fondateur", leadDesigner: "Designer Principal", leadDeveloper: "Développeur Principal", marketingDir: "Directeur Marketing"
+            ceo: "PDG et Fondateur", leadDesigner: "Designer Principal", leadDeveloper: "Développeur Principal", marketingDir: "Directeur Marketing",
+            portfolio: "Portfolio", ourProjects: "Nos Projets", projectsShowcase: "Une vitrine de notre travail récent et de nos réalisations.",
+            ourPartnersClients: "Nos Partenaires et Clients", partnersDesc: "Nous avons travaillé avec des entreprises incroyables du monde entier.",
+            getInTouch: "Contactez-nous", haveProject: "Vous avez un projet en tête? Discutons de comment nous pouvons aider.",
+            email: "Email", phone: "Téléphone", location: "Adresse",
+            aboutUs: "À Propos", whoWeAre: "Qui Nous Sommes", aboutDesc: "Nous sommes une équipe de développeurs et designers passionnés dédiés à la création d'expériences numériques exceptionnelles.",
+            testiDesc: "Ne prenez pas seulement notre parole - écoutez nos clients satisfaits.",
+            project1: "Plateforme E-Commerce", project2: "Tableau de Bord Analytique", project3: "App Banque Mobile", project4: "Plateforme Sociale", project5: "Plateforme E-Learning", project6: "App Restaurant",
+            reactVue: "React & Vue.js", nodeBackend: "Backend Node.js", restApi: "APIs REST & GraphQL",
+            figmaXd: "Figma & Adobe XD", prototyping: "Prototypage", designSystems: "Systèmes de Design",
+            shopifyWoo: "Shopify & WooCommerce", paymentGateway: "Passerelle de Paiement", adminDashboard: "Dashboard Admin",
+            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "Pipelines CI/CD"
         },
         de: {
             home: "Startseite", about: "Über uns", services: "Leistungen", projects: "Projekte", contact: "Kontakt",
@@ -152,7 +185,18 @@ document.addEventListener('DOMContentLoaded', function() {
             quickLinks: "Schnelllinks", newsletter: "Newsletter", newsletterDesc: "Abonnieren Sie für Updates.",
             yourEmail: "Ihre E-Mail", allRights: "Alle Rechte vorbehalten.",
             teamSection: "Unser Team", meetExperts: "Treffen Sie die Experten", teamDesc: "Talentierte Menschen, die alles möglich machen.",
-            ceo: "CEO & Gründer", leadDesigner: "Lead Designer", leadDeveloper: "Lead Entwickler", marketingDir: "Marketing Direktor"
+            ceo: "CEO & Gründer", leadDesigner: "Lead Designer", leadDeveloper: "Lead Entwickler", marketingDir: "Marketing Direktor",
+            portfolio: "Portfolio", ourProjects: "Unsere Projekte", projectsShowcase: "Eine Präsentation unserer jüngsten Arbeit und Erfolge.",
+            ourPartnersClients: "Unsere Partner & Kunden", partnersDesc: "Wir haben mit erstaunlichen Unternehmen auf der ganzen Welt zusammengearbeitet.",
+            getInTouch: "Kontaktieren Sie Uns", haveProject: "Haben Sie ein Projekt im Sinn? Lassen Sie uns besprechen, wie wir helfen können.",
+            email: "E-Mail", phone: "Telefon", location: "Standort",
+            aboutUs: "Über Uns", whoWeAre: "Wer Wir Sind", aboutDesc: "Wir sind ein Team leidenschaftlicher Entwickler und Designer, die außergewöhnliche digitale Erlebnisse schaffen.",
+            testiDesc: "Verlassen Sie sich nicht nur auf unser Wort - hören Sie von unseren zufriedenen Kunden.",
+            project1: "E-Commerce Plattform", project2: "Analyse-Dashboard", project3: "Mobile Banking App", project4: "Soziale Plattform", project5: "E-Learning Plattform", project6: "Restaurant App",
+            reactVue: "React & Vue.js", nodeBackend: "Node.js Backend", restApi: "REST & GraphQL APIs",
+: "Figma            figmaXd & Adobe XD", prototyping: "Prototyping", designSystems: "Design Systeme",
+            shopifyWoo: "Shopify & WooCommerce", paymentGateway: "Zahlungs-Gateway", adminDashboard: "Admin Dashboard",
+            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "CI/CD Pipelines"
         },
         zh: {
             home: "首页", about: "关于", services: "服务", projects: "项目", contact: "联系",
@@ -188,7 +232,18 @@ document.addEventListener('DOMContentLoaded', function() {
             quickLinks: "快速链接", newsletter: "简报", newsletterDesc: "订阅获取最新动态。",
             yourEmail: "您的邮箱", allRights: "版权所有。",
             teamSection: "我们的团队", meetExperts: "认识专家", teamDesc: "才华横溢的人让一切成为可能。",
-            ceo: "首席执行官兼创始人", leadDesigner: "首席设计师", leadDeveloper: "首席开发者", marketingDir: "市场总监"
+            ceo: "首席执行官兼创始人", leadDesigner: "首席设计师", leadDeveloper: "首席开发者", marketingDir: "市场总监",
+            portfolio: "作品集", ourProjects: "我们的项目", projectsShowcase: "展示我们最近的工作和成就。",
+            ourPartnersClients: "我们的合作伙伴和客户", partnersDesc: "我们与全球优秀公司合作过。",
+            getInTouch: "联系我们", haveProject: "有项目想法？让我们讨论如何帮助您。",
+            email: "邮箱", phone: "电话", location: "地址",
+            aboutUs: "关于我们", whoWeAre: "我们是谁", aboutDesc: "我们是一个充满热情的开发者和平面设计师团队，致力于打造卓越的数字体验。",
+            testiDesc: "不要只听我们说 - 听听我们满意的客户怎么说。",
+            project1: "电商平台", project2: "分析仪表板", project3: "移动银行应用", project4: "社交平台", project5: "在线学习平台", project6: "餐厅应用",
+            reactVue: "React和Vue.js", nodeBackend: "Node.js后端", restApi: "REST和GraphQL API",
+            figmaXd: "Figma和Adobe XD", prototyping: "原型设计", designSystems: "设计系统",
+            shopifyWoo: "Shopify和WooCommerce", paymentGateway: "支付网关", adminDashboard: "管理后台",
+            awsAzure: "AWS和Azure", dockerKube: "Docker和Kubernetes", cicdPipelines: "持续集成/持续部署"
         },
         ja: {
             home: "ホーム", about: "概要", services: "サービス", projects: "プロジェクト", contact: "お問い合わせ",
@@ -224,7 +279,18 @@ document.addEventListener('DOMContentLoaded', function() {
             quickLinks: "クイックリンク", newsletter: "ニュースレター", newsletterDesc: "更新を購読してください。",
             yourEmail: "メールアドレス", allRights: "全著作権所有",
             teamSection: "チーム", meetExperts: "専門家を紹介します", teamDesc: "、すべてを可能にする才能のある人々。",
-            ceo: "CEO & 創業者", leadDesigner: "リードデザイナー", leadDeveloper: "リード開発者", marketingDir: "マーケティングディレクター"
+            ceo: "CEO & 創業者", leadDesigner: "リードデザイナー", leadDeveloper: "リード開発者", marketingDir: "マーケティングディレクター",
+            portfolio: "ポートフォリオ", ourProjects: "私たちのプロジェクト", projectsShowcase: "最近の成果物や実績のご紹介。",
+            ourPartnersClients: "パートナーとクライアント", partnersDesc: "世界中の素晴らしい企業々と合作しました。",
+            getInTouch: "お問い合わせ", haveProject: "プロジェクト的想法がありますか？どのようにお手伝いできるか一緒に議論しましょう。",
+            email: "メール", phone: "電話", location: "所在地",
+            aboutUs: "私達について", whoWeAre: "私たちは誰ですか", aboutDesc: "私たちは、卓越したデジタル体験を生み出すことに情熱的な開発者とデザイナーのチームです。",
+            testiDesc: "私たちの言葉を信じるだけでなく、満足したクライアントの声を聴いてください。",
+            project1: "Eコマースプラットフォーム", project2: "分析ダッシュボード", project3: "モバイルバンキングアプリ", project4: "ソーシャルプラットフォーム", project5: "Eラー二ングプラットフォーム", project6: "レストラアプリ",
+            reactVue: "React & Vue.js", nodeBackend: "Node.js バックエンド", restApi: "REST & GraphQL API",
+            figmaXd: "Figma & Adobe XD", prototyping: "プロトタイピング", designSystems: "デザインシステム",
+            shopifyWoo: "Shopify & WooCommerce", paymentGateway: "決済ゲートウェイ", adminDashboard: "管理画面",
+            awsAzure: "AWS & Azure", dockerKube: "Docker & Kubernetes", cicdPipelines: "CI/CD パイプライン"
         }
     };
 
@@ -360,15 +426,31 @@ document.addEventListener('DOMContentLoaded', function() {
         var clientsTitle = document.querySelector('.clients-section h2');
         if (clientsTitle) clientsTitle.textContent = t.trustedBy;
         
-        // Partners & Clients section
-        var partnersTag = document.querySelector('.partners-section .section-tag, [class*="partners"] .section-tag');
-        if (partnersTag && t.ourPartners) partnersTag.textContent = t.ourPartners;
+        // Partners section (the main partners section in hero area)
+        var partnersSection = document.querySelector('#partners, .partners');
+        if (partnersSection) {
+            var partnersTag = partnersSection.querySelector('.section-tag');
+            if (partnersTag && t.trustedBy) partnersTag.textContent = t.trustedBy;
+            
+            var partnersTitle = partnersSection.querySelector('h2');
+            if (partnersTitle && t.ourPartnersClients) partnersTitle.textContent = t.ourPartnersClients;
+            
+            var partnersDesc = partnersSection.querySelector('p');
+            if (partnersDesc && t.partnersDesc) partnersDesc.textContent = t.partnersDesc;
+        }
         
-        var partnersTitle = document.querySelector('.partners-section h2, [class*="partners"] h2');
-        if (partnersTitle && t.trustedBy) partnersTitle.textContent = t.trustedBy;
-        
-        var partnersDesc = document.querySelector('.partners-section p, [class*="partners"] p');
-        if (partnersDesc && t.partnersDesc) partnersDesc.textContent = t.partnersDesc;
+        // Projects section
+        var projectsSection = document.querySelector('#projects, .projects');
+        if (projectsSection) {
+            var projectsTag = projectsSection.querySelector('.section-tag');
+            if (projectsTag && t.portfolio) projectsTag.textContent = t.portfolio;
+            
+            var projectsTitle = projectsSection.querySelector('h2');
+            if (projectsTitle && t.ourProjects) projectsTitle.textContent = t.ourProjects;
+            
+            var projectsDesc = projectsSection.querySelector('p');
+            if (projectsDesc && t.projectsShowcase) projectsDesc.textContent = t.projectsShowcase;
+        }
         
         // ===== CTA SECTION =====
         var ctaTitle = document.querySelector('.cta-section h2');
@@ -962,3 +1044,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+// ADDITIONAL TRANSLATION KEYS ADDED
