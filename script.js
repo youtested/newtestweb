@@ -1012,36 +1012,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Language selection
+    // Language selection - redirect to language-specific page
     if (langDropdown) {
         langDropdown.querySelectorAll('a').forEach(function(link) {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 var lang = this.getAttribute('data-lang');
-                updateLanguage(lang);
-                langDropdown.classList.remove('show');
+                // Redirect to language-specific page
+                var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                var baseName = currentPage.replace('.html', '');
+                if (lang === 'en') {
+                    window.location.href = baseName + '.html';
+                } else {
+                    window.location.href = baseName + '-' + lang + '.html';
+                }
             });
         });
     }
 
-    // Mobile language selector
+    // Mobile language selector - redirect to language-specific page
     var mobileLangSelector = document.querySelector('.mobile-lang-selector');
     if (mobileLangSelector) {
         mobileLangSelector.querySelectorAll('a').forEach(function(link) {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 var lang = this.getAttribute('data-lang');
-                updateLanguage(lang);
-                // Update active state
-                mobileLangSelector.querySelectorAll('a').forEach(function(l) {
-                    l.classList.remove('active');
-                });
-                this.classList.add('active');
-                // Close mobile menu
-                var mobileMenu = document.querySelector('.mobile-menu');
-                var navToggle = document.querySelector('.nav-toggle');
-                if (mobileMenu) mobileMenu.classList.remove('active');
-                if (navToggle) navToggle.classList.remove('active');
+                // Redirect to language-specific page
+                var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                var baseName = currentPage.replace('.html', '');
+                if (lang === 'en') {
+                    window.location.href = baseName + '.html';
+                } else {
+                    window.location.href = baseName + '-' + lang + '.html';
+                }
+            });
+        });
+    }
                 document.body.classList.remove('menu-open');
             });
         });
