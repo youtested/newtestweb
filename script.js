@@ -413,12 +413,130 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
+        // ===== ADDITIONAL TRANSLATIONS =====
+        
+        // Service descriptions
+        var serviceDescs = document.querySelectorAll('.service-card > p');
+        if (serviceDescs[0] && t.webDevDesc) serviceDescs[0].textContent = t.webDevDesc;
+        if (serviceDescs[1] && t.uiuxDesc) serviceDescs[1].textContent = t.uiuxDesc;
+        if (serviceDescs[2] && t.ecommerceDesc) serviceDescs[2].textContent = t.ecommerceDesc;
+        if (serviceDescs[3] && t.cloudDesc) serviceDescs[3].textContent = t.cloudDesc;
+        
+        // Pricing prices
+        var pricingPrices = document.querySelectorAll('.pricing-price');
+        if (pricingPrices[0] && t.basicPrice) pricingPrices[0].textContent = t.basicPrice;
+        if (pricingPrices[1] && t.proPrice) pricingPrices[1].textContent = t.proPrice;
+        if (pricingPrices[2] && t.enterprisePrice) pricingPrices[2].textContent = t.enterprisePrice;
+        
+        // Pricing features
+        var pricingLists = document.querySelectorAll('.pricing-features');
+        if (pricingLists[0] && t.basicFeatures) {
+            pricingLists[0].innerHTML = t.basicFeatures.split(',').map(function(f) { return '<li><i class="fas fa-check"></i> ' + f.trim() + '</li>'; }).join('');
+        }
+        
+        // Logo
+        var logo = document.querySelector('.logo');
+        if (logo && t.buildDigi) {
+            logo.innerHTML = '<i class="fas fa-globe"></i> ' + t.buildDigi;
+        }
+        
+        // Testimonials
+        var testiTexts = document.querySelectorAll('.testimonial-content p');
+        if (testiTexts[0] && t.testimonial1) testiTexts[0].textContent = '"' + t.testimonial1 + '"';
+        if (testiTexts[1] && t.testimonial2) testiTexts[1].textContent = '"' + t.testimonial2 + '"';
+        if (testiTexts[2] && t.testimonial3) testiTexts[2].textContent = '"' + t.testimonial3 + '"';
+        
+        var testiAuthors = document.querySelectorAll('.testimonial-author h4');
+        var testiCompanies = document.querySelectorAll('.testimonial-author p');
+        if (testiAuthors[0] && t.author1) testiAuthors[0].textContent = t.author1;
+        if (testiCompanies[0] && t.company1) testiCompanies[0].textContent = t.company1;
+        if (testiAuthors[1] && t.author2) testiAuthors[1].textContent = t.author2;
+        if (testiCompanies[1] && t.company2) testiCompanies[1].textContent = t.company2;
+        if (testiAuthors[2] && t.author3) testiAuthors[2].textContent = t.author3;
+        if (testiCompanies[2] && t.company3) testiCompanies[2].textContent = t.company3;
+        
+        // Footer brand text
+        var footerBrandDesc = document.querySelector('.footer-brand p');
+        if (footerBrandDesc) footerBrandDesc.textContent = "Building digital experiences that matter.";
+        
+        // Copyright
+        var copyright = document.querySelector('.footer-bottom p');
+        if (copyright && t.allRights) {
+            copyright.textContent = '© 2026 NewTestWeb. ' + t.allRights;
+        }
+        
+        // Team section
+        var teamTag = document.querySelector('.team-section .section-tag');
+        if (teamTag && t.teamSection) teamTag.textContent = t.teamSection;
+        
+        var teamTitle = document.querySelector('.team-section h2');
+        if (teamTitle && t.meetExperts) teamTitle.textContent = t.meetExperts;
+        
+        var teamDesc = document.querySelector('.team-section .section-header p');
+        if (teamDesc && t.teamDesc) teamDesc.textContent = t.teamDesc;
+        
+        var teamRoles = document.querySelectorAll('.team-role');
+        if (teamRoles[0] && t.ceo) teamRoles[0].textContent = t.ceo;
+        if (teamRoles[1] && t.leadDesigner) teamRoles[1].textContent = t.leadDesigner;
+        if (teamRoles[2] && t.leadDeveloper) teamRoles[2].textContent = t.leadDeveloper;
+        if (teamRoles[3] && t.marketingDir) teamRoles[3].textContent = t.marketingDir;
+        
+        // About page
+        var aboutTag = document.querySelector('.page-header .section-tag');
+        if (aboutTag && t.about) aboutTag.textContent = t.about;
+        
+        var aboutTitle = document.querySelector('.page-header h1');
+        if (aboutTitle && t.about) aboutTitle.textContent = t.about;
+        
+        // Services page
+        var servicesTag = document.querySelector('.page-header .section-tag');
+        if (servicesTag && t.services) servicesTag.textContent = t.services;
+        
+        var servicesTitle = document.querySelector('.page-header h1');
+        if (servicesTitle && t.services) servicesTitle.textContent = t.services;
+        
+        // Projects page
+        var projectsTag = document.querySelector('.page-header .section-tag');
+        if (projectsTag && t.projects) projectsTag.textContent = t.projects;
+        
+        var projectsTitle = document.querySelector('.page-header h1');
+        if (projectsTitle && t.projects) projectsTitle.textContent = t.projects;
+        
+        // Contact page
+        var contactTag = document.querySelector('.page-header .section-tag');
+        if (contactTag && t.contact) contactTag.textContent = t.contact;
+        
+        var contactTitle = document.querySelector('.page-header h1');
+        if (contactTitle && t.contact) contactTitle.textContent = t.contact;
+        
+        // Contact form
+        var formName = document.querySelector('input[name="name"]');
+        if (formName && t.yourName) formName.placeholder = t.yourName;
+        
+        var formEmail = document.querySelector('input[name="email"]');
+        if (formEmail && t.yourEmail) formEmail.placeholder = t.yourEmail;
+        
+        var formMessage = document.querySelector('textarea[name="message"]');
+        if (formMessage && t.yourMessage) formMessage.placeholder = t.yourMessage;
+        
+        var submitBtn = document.querySelector('.contact-form button[type="submit"]');
+        if (submitBtn && t.sendMessage) submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> ' + t.sendMessage;
+        
         // Save language preference
         localStorage.setItem('language', lang);
     }
 
-    // Initialize language
-    updateLanguage(savedLang);
+    // Initialize language on page load - run immediately
+    (function() {
+        updateLanguage(savedLang);
+        // Run again after a short delay to catch any late-loading content
+        setTimeout(function() {
+            updateLanguage(savedLang);
+        }, 500);
+        setTimeout(function() {
+            updateLanguage(savedLang);
+        }, 1000);
+    })();
 
     // Language button click
     if (langBtn) {
