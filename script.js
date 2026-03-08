@@ -360,6 +360,16 @@ document.addEventListener('DOMContentLoaded', function() {
         var clientsTitle = document.querySelector('.clients-section h2');
         if (clientsTitle) clientsTitle.textContent = t.trustedBy;
         
+        // Partners & Clients section
+        var partnersTag = document.querySelector('.partners-section .section-tag, [class*="partners"] .section-tag');
+        if (partnersTag && t.ourPartners) partnersTag.textContent = t.ourPartners;
+        
+        var partnersTitle = document.querySelector('.partners-section h2, [class*="partners"] h2');
+        if (partnersTitle && t.trustedBy) partnersTitle.textContent = t.trustedBy;
+        
+        var partnersDesc = document.querySelector('.partners-section p, [class*="partners"] p');
+        if (partnersDesc && t.partnersDesc) partnersDesc.textContent = t.partnersDesc;
+        
         // ===== CTA SECTION =====
         var ctaTitle = document.querySelector('.cta-section h2');
         if (ctaTitle) ctaTitle.textContent = t.readyToStart;
