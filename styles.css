@@ -648,3 +648,32 @@ img {
 .hero, .navbar, .page-header {
     will-change: transform;
 }
+
+/* Mobile Language Selector */
+.mobile-lang-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 0;
+    border-top: 1px solid var(--light-secondary);
+    margin-top: 10px;
+}
+.mobile-lang-selector a {
+    padding: 8px 15px;
+    background: var(--light-secondary);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+}
+.mobile-lang-selector a.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
+[data-theme="dark"] .mobile-lang-selector {
+    border-color: var(--dark-tertiary);
+}
+[data-theme="dark"] .mobile-lang-selector a {
+    background: var(--dark-secondary);
+    color: #e5e5e5;
+}

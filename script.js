@@ -110,11 +110,46 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateLanguage(lang) {
         var t = translations[lang] || translations.en;
         
-        // Update nav links (this is simplified - real implementation would need unique IDs)
+        // Update elements with data-i18n attribute
         document.querySelectorAll('[data-i18n]').forEach(function(el) {
             var key = el.getAttribute('data-i18n');
             if (t[key]) el.textContent = t[key];
         });
+        
+        // Update hero section
+        var heroBadge = document.querySelector('.hero-badge');
+        if (heroBadge && t.welcome) heroBadge.textContent = t.welcome;
+        
+        var heroSubtitle = document.querySelector('.hero-subtitle');
+        if (heroSubtitle && t.subtitle) heroSubtitle.textContent = t.subtitle;
+        
+        var heroDesc = document.querySelector('.hero-description');
+        if (heroDesc && t.description) heroDesc.textContent = t.description;
+        
+        // Update buttons
+        document.querySelectorAll('.btn-primary').forEach(function(btn) {
+            if (btn.textContent.includes('Get Started') || btn.textContent.includes('Started')) {
+                if (t.getStarted) btn.innerHTML = '<i class="fas fa-rocket"></i> ' + t.getStarted;
+            }
+        });
+        
+        // Update section headers
+        var servicesTitle = document.querySelector('.services .section-tag');
+        if (servicesTitle && t.ourServices) servicesTitle.textContent = t.ourServices;
+        
+        // Update FAQ section
+        var faqTag = document.querySelector('.faq-section .section-tag');
+        if (faqTag && t.faq) faqTag.textContent = t.faq;
+        
+        var faqTitle = document.querySelector('.faq-section h2');
+        if (faqTitle && t.faqTitle) faqTitle.textContent = t.faqTitle;
+        
+        // Update CTA section
+        var ctaTitle = document.querySelector('.cta-section h2');
+        if (ctaTitle && t.readyToStart) ctaTitle.textContent = t.readyToStart;
+        
+        var ctaDesc = document.querySelector('.cta-section p');
+        if (ctaDesc && t.letsCreate) ctaDesc.textContent = t.letsCreate;
         
         // Update language button text
         if (langBtn) {
@@ -132,7 +167,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
+        // Save language preference
         localStorage.setItem('language', lang);
+        document.documentElement.setAttribute('lang', lang);
     }
 
     // Initialize language
@@ -154,6 +191,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 var lang = this.getAttribute('data-lang');
                 updateLanguage(lang);
                 langDropdown.classList.remove('show');
+            });
+        });
+    }
+
+    // Mobile language selector
+    var mobileLangSelector = document.querySelector('.mobile-lang-selector');
+    if (mobileLangSelector) {
+        mobileLangSelector.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var lang = this.getAttribute('data-lang');
+                updateLanguage(lang);
+                // Update active state
+                mobileLangSelector.querySelectorAll('a').forEach(function(l) {
+                    l.classList.remove('active');
+                });
+                this.classList.add('active');
+                // Close mobile menu
+                var mobileMenu = document.querySelector('.mobile-menu');
+                var navToggle = document.querySelector('.nav-toggle');
+                if (mobileMenu) mobileMenu.classList.remove('active');
+                if (navToggle) navToggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
             });
         });
     }
