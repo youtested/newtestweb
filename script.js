@@ -67,7 +67,12 @@ document.addEventListener('DOMContentLoaded', function() {
             selectService: "Select a Service", webDevService: "Web Development", uiuxService: "UI/UX Design", cloudService: "Cloud Solutions", otherService: "Other",
             helloEmail: "hello@newtestweb.com", phoneNum: "+1 (555) 123-4567", sfLocation: "San Francisco, CA",
             buildDigi: "Building digital experiences that matter.",
-            copyright: "© 2026 NewTestWeb. All rights reserved."
+            copyright: "© 2026 NewTestWeb. All rights reserved.",
+            cookieText: "We use cookies to improve your experience. By continuing to visit this site you agree to our use of cookies.",
+            accept: "Accept",
+            decline: "Decline",
+            quickLinks: "Quick Links",
+            choosePlanDesc: "Choose the package that fits your needs. No hidden fees."
         },
         es: {
             home: "Inicio", about: "Nosotros", services: "Servicios", projects: "Proyectos", contact: "Contacto",
@@ -124,7 +129,12 @@ document.addEventListener('DOMContentLoaded', function() {
             selectService: "Seleccionar servicio", webDevService: "Desarrollo Web", uiuxService: "Diseño UI/UX", cloudService: "Soluciones Cloud", otherService: "Otro",
             helloEmail: "hola@newtestweb.com", phoneNum: "+1 (555) 123-4567", sfLocation: "San Francisco, CA",
             buildDigi: "Creando experiencias digitales que importan.",
-            copyright: "© 2026 NewTestWeb. Todos los derechos reservados."
+            copyright: "© 2026 NewTestWeb. Todos los derechos reservados.",
+            cookieText: "Usamos cookies para mejorar tu experiencia.",
+            accept: "Aceptar",
+            decline: "Rechazar",
+            quickLinks: "Enlaces Rápidos",
+            choosePlanDesc: "Elige el paquete que se adapte a tus necesidades."
         },
         fr: {
             home: "Accueil", about: "À propos", services: "Services", projects: "Projets", contact: "Contact",
@@ -181,7 +191,12 @@ document.addEventListener('DOMContentLoaded', function() {
             selectService: "Sélectionner un service", webDevService: "Développement Web", uiuxService: "Design UI/UX", cloudService: "Solutions Cloud", otherService: "Autre",
             helloEmail: "bonjour@newtestweb.com", phoneNum: "+1 (555) 123-4567", sfLocation: "San Francisco, CA",
             buildDigi: "Créer des expériences numériques qui comptent.",
-            copyright: "© 2026 NewTestWeb. Tous droits réservés."
+            copyright: "© 2026 NewTestWeb. Tous droits réservés.",
+            cookieText: "Nous utilisons des cookies pour améliorer votre expérience.",
+            accept: "Accepter",
+            decline: "Refuser",
+            quickLinks: "Liens Rapides",
+            choosePlanDesc: "Choisissez le forfait qui correspond à vos besoins."
         },
         de: {
             home: "Startseite", about: "Über uns", services: "Leistungen", projects: "Projekte", contact: "Kontakt",
@@ -238,7 +253,12 @@ document.addEventListener('DOMContentLoaded', function() {
             selectService: "Service auswählen", webDevService: "Webentwicklung", uiuxService: "UI/UX Design", cloudService: "Cloud Lösungen", otherService: "Andere",
             helloEmail: "hallo@newtestweb.com", phoneNum: "+1 (555) 123-4567", sfLocation: "San Francisco, CA",
             buildDigi: "Digitale Erlebnisse schaffen, die wichtig sind.",
-            copyright: "© 2026 NewTestWeb. Alle Rechte vorbehalten."
+            copyright: "© 2026 NewTestWeb. Alle Rechte vorbehalten.",
+            cookieText: "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern.",
+            accept: "Akzeptieren",
+            decline: "Ablehnen",
+            quickLinks: "Schnelllinks",
+            choosePlanDesc: "Wählen Sie das Paket, das zu Ihren Bedürfnissen passt."
         },
         zh: {
             home: "首页", about: "关于", services: "服务", projects: "项目", contact: "联系",
@@ -298,7 +318,12 @@ document.addEventListener('DOMContentLoaded', function() {
             selectService: "选择服务", webDevService: "网页开发", uiuxService: "UI/UX设计", cloudService: "云解决方案", otherService: "其他",
             helloEmail: "hello@newtestweb.com", phoneNum: "+1 (555) 123-4567", sfLocation: "加州旧金山",
             buildDigi: "打造重要的数字体验。",
-            copyright: "© 2026 NewTestWeb. 版权所有。"
+            copyright: "© 2026 NewTestWeb. 版权所有。",
+            cookieText: "我们使用cookies来改善您的体验。",
+            accept: "接受",
+            decline: "拒绝",
+            quickLinks: "快速链接",
+            choosePlanDesc: "选择适合您需求的套餐。无隐藏费用。"
         },
         ja: {
             home: "ホーム", about: "概要", services: "サービス", projects: "プロジェクト", contact: "お問い合わせ",
@@ -355,7 +380,12 @@ document.addEventListener('DOMContentLoaded', function() {
             selectService: "サービスを選択", webDevService: "Web開発", uiuxService: "UI/UXデザイン", cloudService: "クラウドソリューション", otherService: "その他",
             helloEmail: "hello@newtestweb.com", phoneNum: "+1 (555) 123-4567", sfLocation: "サンフランシスコ",
             buildDigi: "重要なデジタル体験を創造します。",
-            copyright: "© 2026 NewTestWeb. 全著作権所有。"
+            copyright: "© 2026 NewTestWeb. 全著作権所有。",
+            cookieText: "私たちはCookieを使用して体験を向上させます。",
+            accept: "同意",
+            decline: "拒否",
+            quickLinks: "クイックリンク",
+            choosePlanDesc: "ニーズに合わせたパッケージを選択してください。"
         }
     };
 
@@ -775,6 +805,197 @@ document.addEventListener('DOMContentLoaded', function() {
         
         var submitBtn = document.querySelector('.contact-form button[type="submit"]');
         if (submitBtn && t.sendMessage) submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> ' + t.sendMessage;
+        
+        // COMPREHENSIVE TRANSLATION - Translate ALL remaining English text
+        var allTextElements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, li, a, button, label, th, td, .section-tag, .stat-label, .hero-badge, .hero-subtitle, .hero-description, .about-card h3, .about-card p, .service-card h3, .service-card p, .service-features li, .pricing-card h3, .pricing-card > p, .pricing-features li, .testimonial-content > p, .testimonial-author h4, .testimonial-author p, .faq-question span, .faq-answer p, .partner-logo span, .project-card h3, .project-card p, .project-tech span, .client-logo span, .contact-info-item h4, .contact-info-item p, .footer-links h4, .footer-links a, .footer-brand p, .footer-newsletter h4, .footer-newsletter p, .cookie-text');
+        
+        var translationMap = {
+            // Stats
+            'Projects': t.projectsCompleted,
+            'Clients': t.happyClients,
+            'Years': t.yearsExperience,
+            'Awards Won': t.awardsWon,
+            
+            // About
+            'About Us': t.aboutUs,
+            'Who We Are': t.whoWeAre,
+            "We're a team of passionate developers and designers dedicated to creating exceptional digital experiences.": t.aboutDesc,
+            'Innovative': t.innovative,
+            'We stay ahead of the curve, using the latest technologies and design trends.': t.innovativeDesc,
+            'Client-Focused': t.clientFocused,
+            'Your goals become our mission. We listen, adapt, and deliver excellence.': t.clientFocusedDesc,
+            'Reliable': t.reliable,
+            'Count on us for robust solutions and dedicated ongoing support.': t.reliableDesc,
+            
+            // Services
+            'Our Services': t.ourServices,
+            'What We Offer': t.whatWeOffer,
+            'Comprehensive digital solutions tailored to your business needs.': t.comprehensive,
+            'Web Development': t.webDev,
+            'Custom websites built with modern frameworks and best practices.': t.webDevDesc,
+            'UI/UX Design': t.uiux,
+            'Beautiful, intuitive designs that engage users and drive conversions.': t.uiuxDesc,
+            'E-Commerce': t.ecommerce,
+            'Full-featured online stores with secure payments and inventory management.': t.ecommerceDesc,
+            'Cloud Solutions': t.cloud,
+            'Scalable cloud infrastructure and deployment pipelines.': t.cloudDesc,
+            
+            // Testimonials
+            'Testimonials': t.testimonials,
+            "What Our Clients Say": t.whatTheySay,
+            "Don't just take our word for it - hear from our satisfied clients.": t.testiDesc,
+            'John Smith': t.author1,
+            'CEO, TechStart Inc.': t.company1,
+            'Sarah Johnson': t.author2,
+            'Founder, FashionHub': t.company2,
+            'Michael Chen': t.author3,
+            'Director, StartupLabs': t.company3,
+            
+            // Pricing
+            'Pricing': t.pricing,
+            'Choose Your Plan': t.choosePlan,
+            'Choose the package that fits your needs. No hidden fees.': t.choosePlanDesc,
+            'Most Popular': t.popular,
+            'Perfect for small businesses': t.perfectSmall,
+            'Best for growing businesses': t.bestGrowing,
+            'For large organizations': t.largeOrg,
+            'Starter': t.starter,
+            'Professional': t.professional,
+            'Enterprise': t.enterprise,
+            'Basic Plan': t.basicPlan,
+            'Professional Plan': t.proPlan,
+            'Enterprise Plan': t.enterprisePlan,
+            
+            // FAQ
+            'FAQ': t.faq,
+            'Frequently Asked Questions': t.faqTitle,
+            "Got questions? We've got answers!": t.faqDesc,
+            'How long does it take to build a website?': t.howLong,
+            'Most projects take 2-6 weeks depending on complexity. A simple landing page can be done in a few days, while complex e-commerce sites may take 8-12 weeks.': t.howLongAns,
+            'Do you provide domain and hosting?': t.provideHosting,
+            'Yes! We can help you purchase and manage your domain and hosting. We offer affordable hosting packages starting at $10/month.': t.provideHostingAns,
+            'Can I update the website myself?': t.updateSelf,
+            'Absolutely! We provide a user-friendly content management system (CMS) that allows you to easily update text, images, and content without coding.': t.updateSelfAns,
+            'Do you offer SEO services?': t.seoServices,
+            'Yes! All our websites come with basic SEO optimization. We also offer advanced SEO packages to help improve your Google rankings.': t.seoServicesAns,
+            'What about ongoing support?': t.ongoingSupport,
+            'We offer monthly support packages starting at $99/month for updates, fixes, and improvements. We\'re always here to help!': t.ongoingSupportAns,
+            'What payment methods do you accept?': t.paymentMethods,
+            'We accept bank transfer, credit cards, PayPal, and crypto. We also offer payment plans for larger projects.': t.paymentMethodsAns,
+            
+            // Partners
+            'Trusted by Industry Leaders': t.trustedBy,
+            'Our Partners & Clients': t.ourPartnersClients,
+            "We've worked with amazing companies around the world.": t.partnersDesc,
+            'CloudTech': t.partner1,
+            'SpaceX': t.partner2,
+            'HealthPlus': t.partner3,
+            'ShopEasy': t.partner4,
+            'DataViz': t.partner5,
+            'EduLearn': t.partner6,
+            
+            // Projects
+            'Portfolio': t.portfolio,
+            'Our Projects': t.ourProjects,
+            'A showcase of our recent work and achievements.': t.projectsShowcase,
+            'E-Commerce Platform': t.project1,
+            'Full-featured online shopping platform with inventory management.': t.projectDesc1,
+            'Analytics Dashboard': t.project2,
+            'Real-time data visualization dashboard for business intelligence.': t.projectDesc2,
+            'Mobile Banking App': t.project3,
+            'Secure mobile banking application with biometric authentication.': t.projectDesc3,
+            'Social Platform': t.project4,
+            'Community platform with real-time messaging and user profiles.': t.projectDesc4,
+            'E-Learning Platform': t.project5,
+            'Online learning management system with video streaming.': t.projectDesc5,
+            'Restaurant App': t.project6,
+            'Table reservation and ordering system for restaurants.': t.projectDesc6,
+            'View Project': t.viewProject,
+            
+            // Contact
+            'Contact': t.contact,
+            'Contact Us': t.contactUs,
+            'Get In Touch': t.getInTouch,
+            'Have a project in mind? Let\'s discuss how we can help.': t.haveProject,
+            'Email': t.email,
+            'hello@newtestweb.com': t.helloEmail,
+            'Phone': t.phone,
+            '+1 (555) 123-4567': t.phoneNum,
+            'Location': t.location,
+            'San Francisco, CA': t.sfLocation,
+            'Your Name': t.yourName,
+            'Your Email': t.yourEmail,
+            'Your Message': t.yourMessage,
+            'Select a Service': t.selectService,
+            'Web Development': t.webDevService,
+            'UI/UX Design': t.uiuxService,
+            'E-Commerce': t.ecommerce,
+            'Cloud Solutions': t.cloudService,
+            'Other': t.otherService,
+            'Send Message': t.sendMessage,
+            
+            // Footer
+            'Quick Links': t.quickLinks,
+            'Services': t.services,
+            'Newsletter': t.newsletter,
+            'Subscribe for updates and insights.': t.newsletterDesc,
+            'Your email': t.yourEmail,
+            'Subscribe': t.subscribe,
+            'Building digital experiences that matter.': t.buildDigi,
+            '© 2026 NewTestWeb. All rights reserved.': t.copyright,
+            
+            // Hero
+            'Welcome to': t.welcome,
+            'Building Digital Experiences That Matter': t.subtitle,
+            'We create stunning, functional websites that help businesses grow. From design to deployment, we\'ve got you covered.': t.description,
+            'Get Started': t.getStarted,
+            'Learn More': t.learnMore,
+            'View Our Work': t.viewWork,
+            
+            // Cookie
+            'We use cookies to improve your experience. By continuing to visit this site you agree to our use of cookies.': t.cookieText,
+            'Accept': t.accept,
+            'Decline': t.decline
+        };
+        
+        allTextElements.forEach(function(el) {
+            var text = el.textContent.trim();
+            if (!text || text.length < 2) return;
+            // Skip if already has non-ASCII (likely already translated)
+            if (/[^\x00-\x7F]/.test(text)) return;
+            
+            if (translationMap[text]) {
+                el.textContent = translationMap[text];
+            }
+        });
+        
+        // Translate placeholders
+        document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(function(el) {
+            var ph = el.placeholder;
+            if (!ph) return;
+            if (/[^\x00-\x7F]/.test(ph)) return;
+            
+            if (ph === 'Your Name' && t.yourName) el.placeholder = t.yourName;
+            else if (ph === 'Your email' && t.yourEmail) el.placeholder = t.yourEmail;
+            else if (ph === 'Your Email' && t.yourEmail) el.placeholder = t.yourEmail;
+            else if (ph === 'Your Message' && t.yourMessage) el.placeholder = t.yourMessage;
+        });
+        
+        // Translate buttons
+        document.querySelectorAll('button, .btn').forEach(function(el) {
+            var text = el.textContent.trim();
+            if (!text || /[^\x00-\x7F]/.test(text)) return;
+            
+            if (text === 'Get Started' && t.getStarted) el.innerHTML = '<i class="fas fa-rocket"></i> ' + t.getStarted;
+            else if (text === 'Learn More' && t.learnMore) el.innerHTML = '<i class="fas fa-arrow-right"></i> ' + t.learnMore;
+            else if (text === 'View All' && t.viewAll) el.textContent = t.viewAll;
+            else if (text === 'Get Quote' && t.getQuote) el.textContent = t.getQuote;
+            else if (text === 'View Project' && t.viewProject) el.innerHTML = t.viewProject + ' <i class="fas fa-arrow-right"></i>';
+            else if (text === 'Send Message' && t.sendMessage) el.innerHTML = '<i class="fas fa-paper-plane"></i> ' + t.sendMessage;
+            else if (text === 'Subscribe' && t.subscribe) el.innerHTML = '<i class="fas fa-paper-plane"></i> ' + t.subscribe;
+            else if (text === 'Contact Us' && t.contactUs) el.textContent = t.contactUs;
+            else if (text === 'Start' && t.getStarted) el.innerHTML = '<i class="fas fa-rocket"></i> ' + t.getStarted;
+        });
         
         // Save language preference
         localStorage.setItem('language', lang);
