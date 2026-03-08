@@ -569,12 +569,27 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // ===== ADDITIONAL TRANSLATIONS =====
         
+        // Translate ALL text on the page - aggressive approach
+        var allText = document.body.innerText || document.body.textContent;
+        
         // Service descriptions
         var serviceDescs = document.querySelectorAll('.service-card > p');
         if (serviceDescs[0] && t.webDevDesc) serviceDescs[0].textContent = t.webDevDesc;
         if (serviceDescs[1] && t.uiuxDesc) serviceDescs[1].textContent = t.uiuxDesc;
         if (serviceDescs[2] && t.ecommerceDesc) serviceDescs[2].textContent = t.ecommerceDesc;
         if (serviceDescs[3] && t.cloudDesc) serviceDescs[3].textContent = t.cloudDesc;
+        
+        // Pricing plan names
+        var pricingCards = document.querySelectorAll('.pricing-card h3');
+        if (pricingCards[0] && t.starter) pricingCards[0].textContent = t.starter;
+        if (pricingCards[1] && t.professional) pricingCards[1].textContent = t.professional;
+        if (pricingCards[2] && t.enterprise) pricingCards[2].textContent = t.enterprise;
+        
+        // Pricing descriptions
+        var pricingDescs = document.querySelectorAll('.pricing-card > p');
+        if (pricingDescs[0] && t.perfectSmall) pricingDescs[0].textContent = t.perfectSmall;
+        if (pricingDescs[1] && t.bestGrowing) pricingDescs[1].textContent = t.bestGrowing;
+        if (pricingDescs[2] && t.largeOrg) pricingDescs[2].textContent = t.largeOrg;
         
         // Pricing prices
         var pricingPrices = document.querySelectorAll('.pricing-price');
@@ -587,12 +602,63 @@ document.addEventListener('DOMContentLoaded', function() {
         if (pricingLists[0] && t.basicFeatures) {
             pricingLists[0].innerHTML = t.basicFeatures.split(',').map(function(f) { return '<li><i class="fas fa-check"></i> ' + f.trim() + '</li>'; }).join('');
         }
+        if (pricingLists[1] && t.proFeatures) {
+            pricingLists[1].innerHTML = t.proFeatures.split(',').map(function(f) { return '<li><i class="fas fa-check"></i> ' + f.trim() + '</li>'; }).join('');
+        }
+        if (pricingLists[2] && t.enterpriseFeatures) {
+            pricingLists[2].innerHTML = t.enterpriseFeatures.split(',').map(function(f) { return '<li><i class="fas fa-check"></i> ' + f.trim() + '</li>'; }).join('');
+        }
         
         // Logo
         var logo = document.querySelector('.logo');
         if (logo && t.buildDigi) {
             logo.innerHTML = '<i class="fas fa-globe"></i> ' + t.buildDigi;
         }
+        
+        // Footer brand text
+        var footerBrand = document.querySelector('.footer-brand p');
+        if (footerBrand && t.buildDigi) footerBrand.textContent = t.buildDigi;
+        
+        // Copyright
+        var copyright = document.querySelector('.footer-bottom p');
+        if (copyright && t.copyright) copyright.textContent = t.copyright;
+        
+        // Newsletter input placeholder
+        var newsletterInput = document.querySelector('.newsletter-form input');
+        if (newsletterInput && t.yourEmail) newsletterInput.placeholder = t.yourEmail;
+        
+        // Contact form placeholders
+        var formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
+        if (formInputs[0] && t.yourName) formInputs[0].placeholder = t.yourName;
+        if (formInputs[1] && t.yourEmail) formInputs[1].placeholder = t.yourEmail;
+        
+        var formTextarea = document.querySelector('.contact-form textarea');
+        if (formTextarea && t.yourMessage) formTextarea.placeholder = t.yourMessage;
+        
+        // Contact info headings
+        var contactItems = document.querySelectorAll('.contact-info-item h4');
+        if (contactItems[0] && t.email) contactItems[0].textContent = t.email;
+        if (contactItems[1] && t.phone) contactItems[1].textContent = t.phone;
+        if (contactItems[2] && t.location) contactItems[2].textContent = t.location;
+        
+        // Contact info values
+        var contactValues = document.querySelectorAll('.contact-info-item p');
+        if (contactValues[0] && t.helloEmail) contactValues[0].textContent = t.helloEmail;
+        if (contactValues[1] && t.phoneNum) contactValues[1].textContent = t.phoneNum;
+        if (contactValues[2] && t.sfLocation) contactValues[2].textContent = t.sfLocation;
+        
+        // Buttons - Get Started, View Project, etc.
+        document.querySelectorAll('.btn').forEach(function(btn) {
+            var text = btn.textContent.trim();
+            if (text === 'Get Started' && t.getStarted) btn.innerHTML = '<i class="fas fa-rocket"></i> ' + t.getStarted;
+            if (text === 'Learn More' && t.learnMore) btn.innerHTML = '<i class="fas fa-arrow-right"></i> ' + t.learnMore;
+            if (text === 'View All' && t.viewAll) btn.textContent = t.viewAll;
+            if (text === 'Get Quote' && t.getQuote) btn.textContent = t.getQuote;
+            if (text === 'View Project' && t.viewProject) btn.innerHTML = t.viewProject + ' <i class="fas fa-arrow-right"></i>';
+            if (text === 'Send Message' && t.sendMessage) btn.innerHTML = '<i class="fas fa-paper-plane"></i> ' + t.sendMessage;
+            if (text === 'Subscribe' && t.subscribe) btn.innerHTML = '<i class="fas fa-paper-plane"></i> ' + t.subscribe;
+            if (text === 'Contact Us' && t.contactUs) btn.textContent = t.contactUs;
+        });
         
         // Testimonials
         var testiTexts = document.querySelectorAll('.testimonial-content p');
