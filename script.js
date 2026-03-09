@@ -1048,10 +1048,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-                document.body.classList.remove('menu-open');
-            });
-        });
-    }
 
     // Close dropdown when clicking outside
     document.addEventListener('click', function() {
